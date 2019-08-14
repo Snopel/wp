@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Assignment 2</title>
-    
+
     <!-- Keep wireframe.css for debugging, add your css to style.css -->
     <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
     <link id='stylecss' type="text/css" rel="stylesheet" href="css/style.css">
@@ -14,7 +14,7 @@
   <body>
 
     <header>
-      <div>Put company logo and name here</div>
+      <div><img src='../../media/cinema-icon.png' alt='Cinema Logo'/>Lunardo Cinema</div>
     </header>
 
     <nav>
