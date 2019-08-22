@@ -7,26 +7,52 @@
 
     <!-- Keep wireframe.css for debugging, add your css to style.css -->
     <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
-    <link id='stylecss' type="text/css" rel="stylesheet" href="css/style.css">
+    <link id='stylecss' type="text/css" rel="stylesheet" href="style.css">
     <script src='../wireframe.js'></script>
   </head>
 
   <body>
 
     <header>
-      <div><img src='../../media/cinema-icon.png' alt='Cinema Logo'/>Lunardo Cinema</div>
+      <div><h1><img src='../../media/cinema-icon.png' alt='Cinema Logo'/>  Lunardo Cinema</h1></div>
     </header>
 
     <nav>
+      <center>
       <!-- Below must be fixed to link to the following elements in the Main area -->
       <span>About Us || </span>
       <span>Prices || </span>
       <span>Now Showing</span>
+      </center>
     </nav>
 
     <main>
-      <div>About Us</div> <!-- Make text bigger, but not as big as the header-->
-      <div>(DESCRIBE THE PLACE HERE)</div>
+
+      <div><h2>About Us</h2></div>
+      <pa>
+        <div>Decribe the Cinema</div>
+      </pa>
+
+      <div><h2>Prices</h2></div>
+      <pa>
+        <div>Describe prices</div>
+      </pa>
+
+      <div><h2>Now Showing</h2></div>
+      <pa>
+        <div>Show Current Movies</div>
+      </pa>
+
+      <div><h2>Synopsis</h2></div>
+      <pa>
+        <div>Describe Movies</div>
+      </pa>
+
+      <div><h2>Booking</h2></div>
+      <pa>
+        <div>TBE</div>
+      </pa>
+
     </main>
 
     <footer>

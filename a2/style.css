@@ -1,1 +1,31 @@
+  @import url('https://fonts.googleapis.com/css?family=Hepta+Slab&display=swap');
+
 /* A1 CSS Styles: Lunardo Webpage */
+
+/* Use for Main Titles */
+h1 {
+  font-family: 'Hepta Slab', serif;
+  font-weight: bolder;
+  font-size: 100px;
+  text-align: center;
+  margin: 50px;
+}
+
+/* Use for secondary titles */
+h2 {
+  font-family: 'Hepta Slab', serif;
+  font size: 50px;
+  font-weight bold;
+  text-align: center;
+  margin: 25px;
+}
+
+pa {
+  font-size: 18px;
+  text-align: left;
+}
+
+/* ALIGNMENTS */
+center {
+  text-align: center;
+}
