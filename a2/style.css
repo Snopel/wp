@@ -1,31 +1,61 @@
   @import url('https://fonts.googleapis.com/css?family=Hepta+Slab&display=swap');
 
-/* A1 CSS Styles: Lunardo Webpage */
+  /* A1 CSS Styles: Lunardo Webpage */
 
-/* Use for Main Titles */
-h1 {
-  font-family: 'Hepta Slab', serif;
-  font-weight: bolder;
-  font-size: 100px;
-  text-align: center;
-  margin: 50px;
-}
+  /* Use for Main Titles */
+  h1 {
+      font-family: 'Hepta Slab', serif;
+      font-weight: bolder;
+      font-size: 100px;
+      text-align: center;
+      margin: 50px;
+  }
 
-/* Use for secondary titles */
-h2 {
-  font-family: 'Hepta Slab', serif;
-  font size: 50px;
-  font-weight bold;
-  text-align: center;
-  margin: 25px;
-}
+  /* Use for secondary titles */
+  h2 {
+      font-family: 'Hepta Slab', serif;
+      font size: 50px;
+      font-weight bold;
+      text-align: center;
+      margin: 25px;
+      text-decoration: none;
+      color: #000;
+  }
 
-pa {
-  font-size: 18px;
-  text-align: left;
-}
+  /* Using for link bar */
+  h3 {
+      font-family: 'Hepta Slab', serif;
+      font-size: 40px;
+      font-weight: normal;
+      text-align: center;
+  }
 
-/* ALIGNMENTS */
-center {
-  text-align: center;
-}
+  pa {
+      font-family: 'Hepta Slab', sans-serif;
+      font-size: 18px;
+      text-align: center;
+  }
+
+  /* ALIGNMENTS */
+  center {
+      text-align: center;
+  }
+
+  /*BACKGROUND*/
+  body {
+      background-image: white;
+  }
+
+  /* For placing images side by side */
+  .column {
+      float: left;
+      width: 25%;
+      text-align: center;
+  }
+
+  /* For displaying ticket prices */
+  list {
+      font-family: 'Hepta Slab', sans-serif;
+      font-size: 18px;
+      text-align: justify;
+  }
