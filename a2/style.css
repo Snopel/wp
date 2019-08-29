@@ -41,6 +41,10 @@
       text-align: center;
   }
 
+  justify {
+      text-align: justify;
+  }
+
   /*BACKGROUND*/
   body {
       background-image: white;
@@ -59,3 +63,34 @@
       font-size: 18px;
       text-align: justify;
   }
+
+  table,
+  th,
+  td {
+      border: 1px solid black;
+  }
+
+  #box {
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    border: 10px #B63 ridge;
+    margin: 1cm;
+  }
+
+  /* .container {
+      &__image {
+          display: inline-block;
+          vertical-align: top;
+          width: 46%;
+          float: left;
+      }
+
+      &__text {
+          display: inline-block;
+          width: 46%;
+
+          @media (max-width: 620px) {
+              width: 100%;
+          }
+      }*/
