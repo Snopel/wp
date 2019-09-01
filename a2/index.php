@@ -11,123 +11,19 @@
     <link id='stylecss' type="text/css" rel="stylesheet" href="style.css">
     <script src='../wireframe.js'></script>
 
-    <!-- REMOVE WHEN CSS WORKS -->
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-image: url('../../media/background.jpg');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-
-        }
-
-        table.table1,
-        table.table1 tr,
-        table.table1 td {
-            border: 1px solid black;
-            align-content: center;
-            margin: auto;
-        }
-
-        table.table2,
-        table.table2 tr,
-        table.table2 td {
-            border: 1px solid black;
-            align-content: center;
-            margin: auto;
-            table-layout: fixed;
-            width: 600px;
-        }
-
-        box {
-            border: 2px solid black;
-        }
-
-        .container {
-            border: 3px solid black;
-            padding: 20px 40px 40px;
-            max-width: 600px;
-            margin: auto;
-            text-align: justify;
-
-            &__image {
-                width: 250px;
-                margin: 30px 30px 30px 0;
-                float: left;
-            }
-
-            &__text {
-                display: inline;
-
-
-
-                @media (max-width: 620px) {
-                    width: 100%;
-                }
-            }
-        }
-
-        .parallax {
-            /*background-image: url(../../media/cinema-icon.png);*/
-            min-height: 200px;
-            /* Create the parallax scrolling effect */
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-
-        }
-
-        .navbutton {
-            background-color: black;
-            border: white;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            text-decoration: none;
-            width: 150px;
-
-        }
-
-
-        footer {
-            background-color: white width: 75%;
-            padding: 25px;
-            border: 5px solid black;
-            margin: 25px;
-            font-size: 16px;
-            text-align: center;
-        }
-
-        a:hover {
-            color: yellow;
-        }
-
-    </style>
-
 </head>
 
 <body>
 
     <header>
-        <div class="parallax">
+        <div>
             <h1>Lunardo Cinema</h1>
-            <center><img src="../../media/lunardo_logo_s3541341" width="30%"></center>
-            <br>
-            <h2><i>Together we gaze <br> Upon star lit dreams</i></h2>
+            <div class="parallax"></div>
         </div>
     </header>
 
     <nav>
         <center>
-            <!-- Below must be fixed to link to the following elements in the Main area -->
             <h3>
                 <a href="#about_us" class="navbutton">About Us</a>
                 <a href="#prices" class="navbutton">Prices</a>
@@ -231,7 +127,8 @@
                             <img src="../../media/midsommar_poster.jpg" alt="Midsommar" width="30%" style="padding: 25px; float: left;"></a>
                         <div class="container__text">
                             <center>
-                                <h2>Midsommar (Rating: R18+)</h2>
+                                <h2>Midsommar (Rating: R18+)</h2> 
+                                <!-- Times from 'Avengers Endgame -->
                                 <pa>Session Times: <br> <br>
                                     Wednesday - 21:00 <br>
                                     Thursday - 21:00 <br>
@@ -248,6 +145,7 @@
                 <img src="../../media/ouatih_poster.jpg" alt="OUATIH" width="30%" style="padding: 25px; float: left;"> </a>
             <center>
                 <h2>Once Upon A Time In Hollywood (Rating: MA15+)</h2>
+                <!-- Times from 'Top End Wedding'-->
                 <pa>Session Times: <br> <br>
                     Monday - 18:00 <br>
                     Tuesday - 18:00 <br>
@@ -264,7 +162,8 @@
                     <img src="../../media/the_lion_king_poster.jpg" alt="The Lion King" width="30%" style="padding: 25px; float: left;"></a>
                 <div class="container__text">
                     <center>
-                        <h2>The Lion King (Rating: PG)</h2>
+                        <h2>The Lion King (Rating: PG)</h2> 
+                        <!-- Times from 'Dumbo' -->
                         <pa>Session Times: <br> <br>
                             Monday - 12:00 <br>
                             Tuesday - 12:00 <br>
@@ -286,6 +185,7 @@
                     <center>
                         <h2>Avengers Endgame (Rating: M)</h2>
                         <pa>Session Times: <br> <br>
+                            <!-- Times from The Happy Prince -->
                             Wednesday - 12:00 <br>
                             Thursday - 12:00 <br>
                             Friday - 12:00 <br>
@@ -366,7 +266,9 @@
             <h2 id='booking'>Booking</h2>
         </div>
         <pa>
-            <div><i>Coming Soon!</i></div>
+            <div>
+                <center><i>Coming soon!</i></center>
+            </div>
         </pa>
 
         <br>
@@ -375,6 +277,7 @@
     </main>
 
     <footer>
+        <center><img src="../../media/lunardo_logo_s3541341" width="10%"></center><br>
         <div>&copy;<script>
                 document.write(new Date().getFullYear());
 
