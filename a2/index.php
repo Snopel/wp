@@ -72,13 +72,8 @@
         }
 
         .parallax {
-
-            background-image: url(../../media/cinema-icon.png);
-
-
-            min-height: 400px;
-
-
+            /*background-image: url(../../media/cinema-icon.png);*/
+            min-height: 200px;
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
             background-position: center;
@@ -124,6 +119,9 @@
     <header>
         <div class="parallax">
             <h1>Lunardo Cinema</h1>
+            <center><img src="../../media/lunardo_logo_s3541341" width="30%"></center>
+            <br>
+            <h2><i>Together we gaze <br> Upon star lit dreams</i></h2>
         </div>
     </header>
 
@@ -151,7 +149,9 @@
                     <img src='../../media/standard_seat.png' width="12%" style="float: left;"> <img src='../../media/first_class_seat.png' width="11%" style="float: right;"><br>
                     Lunardo now boasts 2 seating options - our time-tested standard seating, as well as new leather, reclining first-class seating for a heightened film experience.
                     Pick your preferred seating at your leisure and enjoy the film to the extent of your being!<br><br>
-                    As well as that, our sound and visual systems have been upgraded for all cinema experiences, with new Dolby Atmos sound & 3D Dolby Vision to encapsulate all customers into the most authentic viewing experience possible. Come see a movie at Lunardo, and put our claims to the test<br>
+                    As well as that, our sound and visual systems have been upgraded for all cinema experiences, with new Dolby Atmos sound & 3D Dolby Vision to encapsulate all customers into the most authentic viewing experience possible.<br><br>
+                    Come put our claims to the test; Gaze with us at endless dreams!<br>
+                    Together we share our atmospheric brilliance and fulfill your viewing desires, here at <b>Lunardo Cinema</b>!<br>
                     <br><img src="../../media/dolby_atmos_logo.png" width="30%"><br><br></justify>
             </div>
         </pa>
@@ -167,7 +167,7 @@
                     <tr>
                         <th>Seat Type</th>
                         <th>Seat Code</th>
-                        <th>All Day Monday and Wednesday AND 12pm on Weekdays</th>
+                        <th>All Day Monday and Wednesday<br>AND 12pm on Weekdays</th>
                         <th>All other times</th>
                     </tr>
                     <tr>
@@ -366,7 +366,7 @@
             <h2 id='booking'>Booking</h2>
         </div>
         <pa>
-            <div>TBE</div>
+            <div><i>Coming Soon!</i></div>
         </pa>
 
         <br>
