@@ -46,13 +46,6 @@
       text-align: justify;
   }
 
-  /*BACKGROUND*/
-  body {
-      background-image: url('../../media/background.jpg');
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-  }
 
   /* For placing images side by side */
   .column {
@@ -72,7 +65,7 @@
       scroll-behavior: smooth;
   }
 
-  /* Background image and effect */
+  /* Background image and Parallax effect */
   body {
       background-image: url('../../media/background.jpg');
       background-repeat: no-repeat;
@@ -125,15 +118,6 @@
       }
   }
 
-  /* Create the parallax scrolling effect */
-  .parallax {
-      background-image: url("../../media/lunardo_logo_s3541341");
-      min-height: 500px;
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-
-  }
 
   /* Effect used for navigation buttones */
   .navbutton {
@@ -160,7 +144,7 @@
       text-align: center;
   }
 
-  /* To change the hover colour of text for buttons */  
+  /* To change the hover colour of text for buttons */
   a:hover {
       color: LightBlue;
   }

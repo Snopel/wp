@@ -18,7 +18,8 @@
     <header>
         <div>
             <h1>Lunardo Cinema</h1>
-            <div class="parallax"></div>
+            <center><img src="../../media/lunardo_logo_s3541341" width="35%"></center>
+            <h2><i>"Where Dreams Move"</i></h2>
         </div>
     </header>
 
@@ -43,9 +44,10 @@
                 <justify>Lunardo Cinema is reopening! To the benefit of our loyal customers, and our new ones, we have reopened after extensive renovations and improvements, in order to provide the most decadent cinema experience possible.
                     <br><br>
                     <img src='../../media/standard_seat.png' width="12%" style="float: left;"> <img src='../../media/first_class_seat.png' width="11%" style="float: right;"><br>
-                    Lunardo now boasts 2 seating options - our time-tested standard seating, as well as new leather, reclining first-class seating for a heightened film experience.
+                    Lunardo now boasts seating options sure to make you relax! Our time-tested standard seating aims to give the best comfort for value while you enjoy your movie.<br>
+                    Additionally if you are looking for a more heightened film experience, we encourage you to try our brand new First Class! These sessions provide divine leather recliners which are sure to leave you sinking into a dreamy world of comfort! <br>
                     Pick your preferred seating at your leisure and enjoy the film to the extent of your being!<br><br>
-                    As well as that, our sound and visual systems have been upgraded for all cinema experiences, with new Dolby Atmos sound & 3D Dolby Vision to encapsulate all customers into the most authentic viewing experience possible.<br><br>
+                    As well as that, our sound and visual systems have been upgraded for all cinema experiences, with new Dolby Atmos sound & 3D Dolby Vision to encapsulate all customers; boasting incredible 360 life-like surround sound to completely immerse you into a harmony of our most authentic viewing experience possible!<br><br>
                     Come put our claims to the test; Gaze with us at endless dreams!<br>
                     Together we share our atmospheric brilliance and fulfill your viewing desires, here at <b>Lunardo Cinema</b>!<br>
                     <br><img src="../../media/dolby_atmos_logo.png" width="30%"><br><br></justify>
@@ -59,6 +61,11 @@
         </div>
         <pa>
             <center>
+              Our session times cater to all manner of viewers of all ages! <br><br>
+              Any child 14 or younger may be eligible for our budget Child price. <br>
+              If you are a holder of a valid concession or pension card, you may be eligible for our reduced Concession prices. <br>
+              Our sessions are also priced differently based on the time of day! So come in on Monday and Wedndesday ANY time, <br> or at 12pm on any other weekday for a serious bargain price!
+              <br><br>
                 <table class="table1">
                     <tr>
                         <th>Seat Type</th>
@@ -112,7 +119,7 @@
             </div>
             <div>
                 <pa>
-                    <center>Click poster to visit official film website</center>
+                    <center>Click the poster to visit official film website!</center>
                 </pa>
             </div>
             <br>
@@ -127,7 +134,7 @@
                             <img src="../../media/midsommar_poster.jpg" alt="Midsommar" width="30%" style="padding: 25px; float: left;"></a>
                         <div class="container__text">
                             <center>
-                                <h2>Midsommar (Rating: R18+)</h2> 
+                                <h2>Midsommar (Rating: R18+)</h2>
                                 <!-- Times from 'Avengers Endgame -->
                                 <pa>Session Times: <br> <br>
                                     Wednesday - 21:00 <br>
@@ -162,7 +169,7 @@
                     <img src="../../media/the_lion_king_poster.jpg" alt="The Lion King" width="30%" style="padding: 25px; float: left;"></a>
                 <div class="container__text">
                     <center>
-                        <h2>The Lion King (Rating: PG)</h2> 
+                        <h2>The Lion King (Rating: PG)</h2>
                         <!-- Times from 'Dumbo' -->
                         <pa>Session Times: <br> <br>
                             Monday - 12:00 <br>
