@@ -1,0 +1,150 @@
+  @import url('https://fonts.googleapis.com/css?family=Hepta+Slab&display=swap');
+
+  /* A1 CSS Styles: Lunardo Webpage */
+
+  /* Use for Main Titles */
+  h1 {
+      font-family: 'Hepta Slab', serif;
+      font-weight: bolder;
+      font-size: 100px;
+      text-align: center;
+      margin: 50px;
+  }
+
+  /* Use for secondary titles */
+  h2 {
+      font-family: 'Hepta Slab', serif;
+      font size: 50px;
+      font-weight bold;
+      text-align: center;
+      margin: 25px;
+      text-decoration: none;
+      color: #000;
+  }
+
+  /* Using for link bar */
+  h3 {
+      font-family: 'Hepta Slab', serif;
+      font-size: 40px;
+      font-weight: normal;
+      text-align: center;
+  }
+
+  /* Default Text */
+  pa {
+      font-family: 'Hepta Slab', sans-serif;
+      font-size: 18px;
+      text-align: center;
+  }
+
+  /* ALIGNMENTS */
+  center {
+      text-align: center;
+  }
+
+  justify {
+      text-align: justify;
+  }
+
+
+  /* For placing images side by side */
+  .column {
+      float: left;
+      width: 25%;
+      text-align: center;
+  }
+
+  /* For displaying ticket prices */
+  list {
+      font-family: 'Hepta Slab', sans-serif;
+      font-size: 18px;
+      text-align: justify;
+  }
+
+  html {
+      scroll-behavior: smooth;
+  }
+
+  /* Background image and Parallax effect */
+  body {
+      background-image: url('../../media/background.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+  }
+
+  /* Used for Price Table */
+  table.table1,
+  table.table1 tr,
+  table.table1 td {
+      border: 1px solid black;
+      align-content: center;
+      margin: auto;
+  }
+
+  /* Used for Session Times table */
+  table.table2,
+  table.table2 tr,
+  table.table2 td {
+      border: 1px solid black;
+      align-content: center;
+      margin: auto;
+      table-layout: fixed;
+      width: 600px;
+  }
+
+  /* Containers used for Synopsis */
+  .container {
+      border: 3px solid black;
+      padding: 20px 40px 40px;
+      max-width: 600px;
+      margin: auto;
+      text-align: justify;
+
+      &__image {
+          width: 250px;
+          margin: 30px 30px 30px 0;
+          float: left;
+      }
+
+      &__text {
+          display: inline;
+
+
+
+          @media (max-width: 620px) {
+              width: 100%;
+          }
+      }
+  }
+
+
+  /* Effect used for navigation buttones */
+  .navbutton {
+      background-color: black;
+      border: white;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      text-decoration: none;
+      width: 150px;
+  }
+
+  /* A more exclusive look for the footer */
+  footer {
+      background-color: white width: 75%;
+      padding: 25px;
+      border: 5px solid black;
+      margin: 25px;
+      font-size: 16px;
+      text-align: center;
+  }
+
+  /* To change the hover colour of text for buttons */
+  a:hover {
+      color: LightBlue;
+  }
