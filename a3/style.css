@@ -120,7 +120,7 @@
 
 
   /* Effect used for navigation buttones */
-  .navbutton {
+  .navbuttona {
       background-color: black;
       border: white;
       color: white;
@@ -128,6 +128,21 @@
       text-align: center;
       display: inline-block;
       font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      text-decoration: none;
+      width: 150px;
+  }
+
+  .navbuttonb {
+      background-color: black;
+      border: white;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      font-weight: bolder;
       margin: 4px 2px;
       cursor: pointer;
       text-decoration: none;
