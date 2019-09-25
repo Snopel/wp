@@ -15,6 +15,198 @@
 
 </head>
 
+<style type="text/css">
+    .form-style-3 {
+        max-width: 300px;
+        font-family: 'Hepta Slab', serif;
+    }
+
+    .form-style-3 label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .form-style-3 label>span {
+        float: left;
+        width: 100px;
+        color: black;
+        font-weight: bold;
+        font-size: 13px;
+    }
+
+    .form-style-3 fieldset {
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        margin: 0px 12px 12px 0px;
+        border: 1px solid black;
+        padding: 20px;
+        background: white;
+    }
+
+    .form-style-3 fieldset legend {
+        color: black;
+        border: 1px black;
+        border-radius: 5px 5px 0px 0px;
+        -webkit-border-radius: 5px 5px 0px 0px;
+        -moz-b
+        -radius: 5px 5px 0px 0px;
+        background: white;
+        padding: 2px 8px 3px 8px;
+        font-weight: normal;
+        font-size: 12px;
+    }
+
+    .form-style-3 textarea {
+        width: 250px;
+        height: 100px;
+    }
+
+    .form-style-3 input[type=text],
+    .form-style-3 input[type=date],
+    .form-style-3 input[type=datetime],
+    .form-style-3 input[type=number],
+    .form-style-3 input[type=search],
+    .form-style-3 input[type=time],
+    .form-style-3 input[type=url],
+    .form-style-3 input[type=email],
+    .form-style-3 select,
+    .form-style-3 textarea {
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        outline: none;
+        color: black;
+        padding: 4px 7px 4px 7px;
+        background: white;
+        width: 50%;
+    }
+
+    .form-style-3 input[type=submit],
+    .form-style-3 input[type=button] {
+        background: white;
+        border: 1px black;
+        padding: 5px 15px 5px 15px;
+        color: black;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        font-weight: bold;
+    }
+
+    .required {
+        color: red;
+        font-weight: normal;
+    }
+
+    #parent {
+        padding: 0px, auto;
+        width: 605px;
+        height: 200px;
+    }
+
+    #child-left {
+        float: left;
+        width: 300px;
+        height: 200px;
+    }
+
+    #child-right {
+        float: right;
+        width: 300px;
+        height: 200px;
+    }
+
+    .navbuttonc {
+        background-color: black;
+        color: white;
+        padding: 5px 10px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        font-weight: bolder;
+        margin: 4px 2px;
+        cursor: pointer;
+        text-decoration: none;
+        width: 150px;
+        border-radius: 5px;
+        float: center;
+    }
+
+    .totalindicator {
+        background-color: black;
+        color: white;
+        padding: 5px 10px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        font-weight: bolder;
+        margin: 4px 2px;
+        cursor: pointer;
+        text-decoration: none;
+        width: 150px;
+        border-radius: 5px;
+        float: center;
+    }
+
+    /* Effect used for navigation buttones */
+    .navbuttona {
+        background-color: black;
+        border: white;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        text-decoration: none;
+        width: 150px;
+        border-radius: 5px;
+    }
+
+    .navbuttonb {
+        background-color: black;
+        border: white;
+        color: white;
+        padding: 10px 23px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        font-weight: bolder;
+        margin: 4px 2px;
+        cursor: pointer;
+        text-decoration: none;
+        width: 150px;
+        border-radius: 5px;
+    }
+
+    .containerc {
+        border: 3px solid black;
+        padding: 20px 80px 175px;
+        max-width: 600px;
+        margin: auto;
+        text-align: justify;
+
+        &__image {
+            width: 250px;
+            margin: 30px 30px 30px 0;
+            float: left;
+        }
+
+        &__text {
+            display: inline;
+
+
+
+            @media (max-width: 620px) {
+                width: 100%;
+            }
+        }
+    }
+
+</style>
+
 <body>
 
     <header>
@@ -30,8 +222,8 @@
             <h3>
                 <a href="#about_us" class="navbuttona">About Us</a>
                 <a href="#prices" class="navbuttona">Prices<a>
-                <a href="#now_showing" class="navbuttona">Now Showing</a>
-                <a href="#booking" class="navbuttona">Booking</a>
+                        <a href="#now_showing" class="navbuttona">Now Showing</a>
+                        <a href="#booking" class="navbuttona">Booking</a>
             </h3>
         </center>
     </nav>
@@ -63,11 +255,11 @@
         </div>
         <pa>
             <center>
-              Our session times cater to all manner of viewers of all ages! <br><br>
-              Any child 14 or younger may be eligible for our budget Child price. <br>
-              If you are a holder of a valid concession or pension card, you may be eligible for our reduced Concession prices. <br>
-              Our sessions are also priced differently based on the time of day! So come in on Monday and Wedndesday ANY time, <br> or at 12pm on any other weekday for a serious bargain price!
-              <br><br>
+                Our session times cater to all manner of viewers of all ages! <br><br>
+                Any child 14 or younger may be eligible for our budget Child price. <br>
+                If you are a holder of a valid concession or pension card, you may be eligible for our reduced Concession prices. <br>
+                Our sessions are also priced differently based on the time of day! So come in on Monday and Wedndesday ANY time, <br> or at 12pm on any other weekday for a serious bargain price!
+                <br><br>
                 <table class="table1">
                     <tr>
                         <th>Seat Type</th>
@@ -136,9 +328,9 @@
                             <img src="../../media/midsommar_poster.jpg" alt="Midsommar" width="30%" style="padding: 25px; float: left;"></a>
                         <div class="container__text">
                             <center>
-                              <br>
-                              <a href="#synopsis" class="navbuttonb" onclick="toggleSyn('midsommar')">Midsommar (Rating: R18+)</a>
-                              <br><br>
+                                <br>
+                                <a href="#synopsis" class="navbuttonb" onclick="toggleSyn('midsommar')">Midsommar (Rating: R18+)</a>
+                                <br><br>
                                 <!-- Times from 'Avengers Endgame -->
                                 <pa>Session Times: <br> <br>
                                     Wednesday - 21:00 <br>
@@ -147,9 +339,9 @@
                                     Saturday - 18:00 <br>
                                     Sunday - 18:00 <br>
                             </center>
-                          </pa>
+        </pa>
 
-                        </td>
+        </td>
         <td>
 
             <a href="https://www.onceuponatimemag.com/table-of-content" target="_blank">
@@ -175,9 +367,9 @@
                     <img src="../../media/the_lion_king_poster.jpg" alt="The Lion King" width="30%" style="padding: 25px; float: left;"></a>
                 <div class="container__text">
                     <center>
-                      <br>
-                      <a href="#synopsis" class="navbuttonb" onclick="toggleSyn('lionking')">The Lion King (Rating: PG)</a>
-                      <br><br>
+                        <br>
+                        <a href="#synopsis" class="navbuttonb" onclick="toggleSyn('lionking')">The Lion King (Rating: PG)</a>
+                        <br><br>
                         <!-- Times from 'Dumbo' -->
                         <pa>Session Times: <br> <br>
                             Monday - 12:00 <br>
@@ -198,9 +390,9 @@
                     <img src="../../media/avengers_endgame_poster.jpg" alt="Avengers Endgame" width="30%" style="padding: 25px; float: left;"></a>
                 <div class="container__text">
                     <center>
-                      <br>
-                      <a href="#synopsis" class="navbuttonb"  onclick="toggleSyn('endgame')">The Avengers: Endgame (Rating: M)</a>
-                      <br><br>
+                        <br>
+                        <a href="#synopsis" class="navbuttonb" onclick="toggleSyn('endgame')">The Avengers: Endgame (Rating: M)</a>
+                        <br><br>
                         <pa>Session Times: <br> <br>
                             <!-- Times from The Happy Prince -->
                             Wednesday - 12:00 <br>
@@ -222,9 +414,11 @@
         <div>
             <h2 id='synopsis'>Synopsis</h2>
         </div>
-        <pa><center>Please select a movie title 'Now Showing' to display a synopsis and booking times!</center></pa>
+        <pa>
+            <center>Please select a movie title 'Now Showing' to display a synopsis and booking times!</center>
+        </pa>
         <br>
-        <div id='midsommarSyn' class="container"  style="display: none;">
+        <div id='midsommarSyn' class="container" style="display: none;">
             <iframe width="350" height="200" src="https://www.youtube.com/embed/l6XWuruEKVM" style="float: right; padding: 20px; border:solid 8px transparent;"></iframe>
             <br>
             <div class="container__text">
@@ -303,75 +497,132 @@
             <h2 id='booking'>Booking</h2>
         </div>
         <pa>
-            <div class="container">
-              <div class="container_text">
-              <div id="bookingTitle"><h2>Please select a movie time from Synopsis above.</h2></div>
-                  <div class="form-style-3">
-                    <form>
-                        <fieldset><legend>Standard</legend>
-                            <label for="field1"><span>Adults</span>
-                                <select name="field1" class="select-field">
-                                    <option value="0">0</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                </select>
-                                <br>
-                            <label for="field2"><span>Concession</span>
-                                <select name="field2" class="select-field">
-                                    <option value="0">0</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                </select>
-                                <br>
-                            <label for="field3"><span>Children</span>
-                                <select name="field3" class="select-field">
-                                    <option value="0">0</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                </select>
-                            </label>
-                        </fieldset>
-                    </form>
-                </div>
-                  <div class="form-style-3">
-                    <form>
-                        <fieldset><legend>First Class</legend>
-                            <label for="field1"><span>Adults</span>
-                                <select name="field1" class="select-field">
-                                    <option value="0">0</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                </select>
-                                <br>
-                            <label for="field2"><span>Concession</span>
-                                <select name="field2" class="select-field">
-                                    <option value="0">0</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                </select>
-                                <br>
-                            <label for="field3"><span>Children</span>
-                                <select name="field3" class="select-field">
-                                    <option value="0">0</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                </select>
-                            </label>
-                        </fieldset>
-                    </form>
-                </div>
-              </div>
-            </div>
-        </pa>
+            <div class="containerc">
+                <div class="container_text">
+                    <div id="bookingTitle" >
+                        <h2>Please select a movie time from Synopsis above.</h2>
+                    </div>
+                    <br>
+                    <div id="parent">
+                          <div id="child-left">
+                              <div class="form-style-3">
+                                <!--Form 1: The prices for the ticekts-->
+                                  <form>
+                                      <fieldset>
+                                          <legend>Standard</legend>
+                                          <label for="field1"><span>Adults</span>
+                                              <select name="field1" class="select-field">
+                                                  <option value="0">0</option>
+                                                  <option value="1">1</option>
+                                                  <option value="2">2</option>
+                                                  <option value="3">3</option>
+                                              </select>
+                                              <br>
+                                              <label for="field2"><span>Concession</span>
+                                                  <select name="field2" class="select-field">
+                                                      <option value="0">0</option>
+                                                      <option value="1">1</option>
+                                                      <option value="2">2</option>
+                                                      <option value="3">3</option>
+                                                  </select>
+                                                  <br>
+                                                  <label for="field3"><span>Children</span>
+                                                      <select name="field3" class="select-field">
+                                                          <option value="0">0</option>
+                                                          <option value="1">1</option>
+                                                          <option value="2">2</option>
+                                                          <option value="3">3</option>
+                                                      </select>
+                                                  </label>
+                                      </fieldset>
+                              </div>
+                              <div class="form-style-3">
+                                      <fieldset>
+                                          <legend>First Class</legend>
+                                          <label for="field1"><span>Adults</span>
+                                              <select name="field1" class="select-field">
+                                                  <option value="0">0</option>
+                                                  <option value="1">1</option>
+                                                  <option value="2">2</option>
+                                                  <option value="3">3</option>
+                                              </select>
+                                              <br>
+                                              <label for="field2"><span>Concession</span>
+                                                  <select name="field2" class="select-field">
+                                                      <option value="0">0</option>
+                                                      <option value="1">1</option>
+                                                      <option value="2">2</option>
+                                                      <option value="3">3</option>
+                                                  </select>
+                                                  <br>
+                                                  <label for="field3"><span>Children</span>
+                                                      <select name="field3" class="select-field">
+                                                          <option value="0">0</option>
+                                                          <option value="1">1</option>
+                                                          <option value="2">2</option>
+                                                          <option value="3">3</option>
+                                                      </select>
+                                                  </label>
+                                                  <label style="font-weight:bolder;font-size:18px;">Total:</label>
+                                      </fieldset>
+                                  </form>
+                              </div>
+                          </div>
 
-        <br>
-        <br>
+                          <div id="child-right">
+
+                              <div class="form-style-3">
+                                <!-- Form 2: Customer details -->
+                                  <form action= method="post">
+                                      <fieldset>
+                                          <legend>Details</legend>
+                                          <label for="field4"><span>Name<span class="required">*</span></span><input type="text" class="input-field" name="field4" value="" /></label>
+                                          <label for="field5"><span>Email<span class="required">*</span></span><input type="email" class="input-field" name="field5" value="" /></label>
+                                          <label for="field6"><span>Mobile<span class="required">*</span></span><input type="text" class="input-field" name="field6" value="" /></label>
+                                          <label for="field7"><span>Credit Card<span class="required">*</span></span><input type="text" class="input-field" name="field7" value="" /></label>
+                                          <label for="field8"><span>Expiry</span>
+                                              <select name="field8" class="select-field">
+                                                  <option value="0">10-2019</option>
+                                                  <option value="1">11-2019</option>
+                                                  <option value="2">12-2019</option>
+                                                  <option value="3">01-2020</option>
+                                                  <option value="3">01-2020</option>
+                                                  <option value="3">02-2020</option>
+                                                  <option value="3">03-2020</option>
+                                                  <option value="3">04-2020</option>
+                                                  <option value="3">05-2020</option>
+                                                  <option value="3">06-2020</option>
+                                                  <option value="3">07-2020</option>
+                                                  <option value="3">08-2020</option>
+                                                  <option value="3">09-2020</option>
+                                                  <option value="3">10-2020</option>
+                                                  <option value="3">11-2020</option>
+                                                  <option value="3">12-2020</option>
+                                                  <option value="3">01-2021</option>
+                                                  <option value="3">02-2021</option>
+                                                  <option value="3">03-2021</option>
+                                                  <option value="3">04-2021</option>
+                                                  <option value="3">05-2021</option>
+                                                  <option value="3">06-2021</option>
+                                                  <option value="3">07-2021</option>
+                                                  <option value="3">08-2021</option>
+                                                  <option value="3">09-2021</option>
+                                                  <option value="3">10-2021</option>
+                                                  <option value="3">11-2021</option>
+                                                  <option value="3">12-2021</option>
+                                              </select>
+                                          </label>
+                                          <a input type="submit" value="Submit" class="navbuttonc">Order</a>
+                                        </fieldset>
+                                      </form>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+          </pa>
+
+          <br>
+          <br>
 
     </main>
 
