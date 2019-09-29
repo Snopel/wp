@@ -15,198 +15,6 @@
 
 </head>
 
-<style type="text/css">
-    .form-style-3 {
-        max-width: 300px;
-        font-family: 'Hepta Slab', serif;
-    }
-
-    .form-style-3 label {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    .form-style-3 label>span {
-        float: left;
-        width: 100px;
-        color: black;
-        font-weight: bold;
-        font-size: 13px;
-    }
-
-    .form-style-3 fieldset {
-        border-radius: 10px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        margin: 0px 12px 12px 0px;
-        border: 1px solid black;
-        padding: 20px;
-        background: white;
-    }
-
-    .form-style-3 fieldset legend {
-        color: black;
-        border: 1px black;
-        border-radius: 5px 5px 0px 0px;
-        -webkit-border-radius: 5px 5px 0px 0px;
-        -moz-b
-        -radius: 5px 5px 0px 0px;
-        background: white;
-        padding: 2px 8px 3px 8px;
-        font-weight: normal;
-        font-size: 12px;
-    }
-
-    .form-style-3 textarea {
-        width: 250px;
-        height: 100px;
-    }
-
-    .form-style-3 input[type=text],
-    .form-style-3 input[type=date],
-    .form-style-3 input[type=datetime],
-    .form-style-3 input[type=number],
-    .form-style-3 input[type=search],
-    .form-style-3 input[type=time],
-    .form-style-3 input[type=url],
-    .form-style-3 input[type=email],
-    .form-style-3 select,
-    .form-style-3 textarea {
-        border-radius: 3px;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        outline: none;
-        color: black;
-        padding: 4px 7px 4px 7px;
-        background: white;
-        width: 50%;
-    }
-
-    .form-style-3 input[type=submit],
-    .form-style-3 input[type=button] {
-        background: white;
-        border: 1px black;
-        padding: 5px 15px 5px 15px;
-        color: black;
-        border-radius: 3px;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        font-weight: bold;
-    }
-
-    .required {
-        color: red;
-        font-weight: normal;
-    }
-
-    #parent {
-        padding: 0px, auto;
-        width: 605px;
-        height: 200px;
-    }
-
-    #child-left {
-        float: left;
-        width: 300px;
-        height: 200px;
-    }
-
-    #child-right {
-        float: right;
-        width: 300px;
-        height: 200px;
-    }
-
-    .navbuttonc {
-        background-color: black;
-        color: white;
-        padding: 5px 10px;
-        text-align: center;
-        display: inline-block;
-        font-size: 16px;
-        font-weight: bolder;
-        margin: 4px 2px;
-        cursor: pointer;
-        text-decoration: none;
-        width: 150px;
-        border-radius: 5px;
-        float: center;
-    }
-
-    .totalindicator {
-        background-color: black;
-        color: white;
-        padding: 5px 10px;
-        text-align: center;
-        display: inline-block;
-        font-size: 16px;
-        font-weight: bolder;
-        margin: 4px 2px;
-        cursor: pointer;
-        text-decoration: none;
-        width: 150px;
-        border-radius: 5px;
-        float: center;
-    }
-
-    /* Effect used for navigation buttones */
-    .navbuttona {
-        background-color: black;
-        border: white;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        text-decoration: none;
-        width: 150px;
-        border-radius: 5px;
-    }
-
-    .navbuttonb {
-        background-color: black;
-        border: white;
-        color: white;
-        padding: 10px 23px;
-        text-align: center;
-        display: inline-block;
-        font-size: 16px;
-        font-weight: bolder;
-        margin: 4px 2px;
-        cursor: pointer;
-        text-decoration: none;
-        width: 150px;
-        border-radius: 5px;
-    }
-
-    .containerc {
-        border: 3px solid black;
-        padding: 20px 80px 175px;
-        max-width: 600px;
-        margin: auto;
-        text-align: justify;
-
-        &__image {
-            width: 250px;
-            margin: 30px 30px 30px 0;
-            float: left;
-        }
-
-        &__text {
-            display: inline;
-
-
-
-            @media (max-width: 620px) {
-                width: 100%;
-            }
-        }
-    }
-
-</style>
-
 <body>
 
     <header>
@@ -220,10 +28,10 @@
     <nav>
         <center>
             <h3>
-                <a href="#about_us" class="navbuttona">About Us</a>
-                <a href="#prices" class="navbuttona">Prices<a>
-                        <a href="#now_showing" class="navbuttona">Now Showing</a>
-                        <a href="#booking" class="navbuttona">Booking</a>
+                <a id="aboutNav" href="#about_us" class="navbuttona">About Us</a>
+                <a id="pricesNav" href="#prices" class="navbuttona">Prices<a>
+                <a id="showingNav" href="#now_showing" class="navbuttona">Now Showing</a>
+                <a id="bookingNav" href="#booking" class="navbuttona">Booking</a>
             </h3>
         </center>
     </nav>
@@ -427,12 +235,15 @@
                     </justify>
                     <br> Make a Booking:
                     <!-- Calling the textSwap function.
-                         When a button is pressed, the text in the Booking form (ID: bookingTitle) changes. -->
-                    <button value="<h2>Midsommar - Wednesday - 21:00</h2>" onclick="textSwap(this)">WED 21:00</button>
-                    <button value="<h2>Midsommar - Thursday - 21:00</h2>" onclick="textSwap(this)">THU 21:00</button>
-                    <button value="<h2>Midsommar - Friday - 21:00</h2>" onclick="textSwap(this)">FRI 21:00</button>
-                    <button value="<h2>Midsommar - Saturday - 18:00</h2>" onclick="textSwap(this)">SAT 18:00</button>
-                    <button value="<h2>Midsommar - Sunday - 18:00</h2>" onclick="textSwap(this)">SUN 18:00</button>
+                         When a button is pressed, the text in the Booking form (ID: bookingTitle) changes.
+                         - Value is what the text will change to.
+                         - Data Value is a trigger for the discount value, which is utilised in 'addPrices'. -->
+
+                    <button data-value="1" value="<h2>Midsommar - Wednesday - 21:00</h2>" onclick="textSwap(this)">WED 21:00</button>
+                    <button data-value="0" value="<h2>Midsommar - Thursday - 21:00</h2>" onclick="textSwap(this)">THU 21:00</button>
+                    <button data-value="0" value="<h2>Midsommar - Friday - 21:00</h2>" onclick="textSwap(this)">FRI 21:00</button>
+                    <button data-value="0" value="<h2>Midsommar - Saturday - 18:00</h2>" onclick="textSwap(this)">SAT 18:00</button>
+                    <button data-value="0" value="<h2>Midsommar - Sunday - 18:00</h2>" onclick="textSwap(this)">SUN 18:00</button>
             </div>
         </div>
 
@@ -445,10 +256,10 @@
                         <!-- From: http://deckchaircinema.com/films/upon-time-hollywood/#targetText=Quentin%20Tarantino's%20Once%20Upon%20a,industry%20they%20hardly%20recognize%20anymore.-->
                     </justify><br>
                     <br> Make a Booking:
-                    <button value="<h2>Once Upon A Time In Hollywood - Monday - 18:00</h2>" onclick="textSwap(this)">MON 18:00</button>
-                    <button value="<h2>Once Upon A Time In Hollywood - Tuesday - 18:00</h2>" onclick="textSwap(this)">TUE 18:00</button>
-                    <button value="<h2>Once Upon A Time In Hollywood - Saturday - 15:00</h2>" onclick="textSwap(this)">SAT 15:00</button>
-                    <button value="<h2>Once Upon A Time In Hollywood - Sunday - 15:00</h2>" onclick="textSwap(this)">SUN 15:00</button>
+                    <button data-value="1" value="<h2>Once Upon A Time In Hollywood - Monday - 18:00</h2>" onclick="textSwap(this)">MON 18:00</button>
+                    <button data-value="0" value="<h2>Once Upon A Time In Hollywood - Tuesday - 18:00</h2>" onclick="textSwap(this)">TUE 18:00</button>
+                    <button data-value="0" value="<h2>Once Upon A Time In Hollywood - Saturday - 15:00</h2>" onclick="textSwap(this)">SAT 15:00</button>
+                    <button data-value="0" value="<h2>Once Upon A Time In Hollywood - Sunday - 15:00</h2>" onclick="textSwap(this)">SUN 15:00</button>
                 </pa>
             </div>
         </div>
@@ -462,13 +273,13 @@
                         <!-- From https://childrenandmedia.org.au/movie-reviews/movies/the-lion-king-->
                     </justify> <br>
                     <br> Make a Booking:
-                    <button value="<h2>The Lion King - Monday - 12:00</h2>" onclick="textSwap(this)">MON 12:00</button>
-                    <button value="<h2>The Lion King - Tuesday - 12:00</h2>" onclick="textSwap(this)">TUE 12:00</button>
-                    <button value="<h2>The Lion King - Wednesday - 18:00</h2>" onclick="textSwap(this)">WED 18:00</button>
-                    <button value="<h2>The Lion King - Thursday - 18:00</h2>" onclick="textSwap(this)">THU 18:00</button>
-                    <button value="<h2>The Lion King - Friday - 18:00</h2>" onclick="textSwap(this)">FRI 18:00</button>
-                    <button value="<h2>The Lion King - Saturday - 12:00</h2>" onclick="textSwap(this)">SAT 12:00</button>
-                    <button value="<h2>The Lion King - Sunday - 12:00</h2>" onclick="textSwap(this)">SUN 12:00</button>
+                    <button data-value="1" value="<h2>The Lion King - Monday - 12:00</h2>" onclick="textSwap(this)">MON 12:00</button>
+                    <button data-value="1" value="<h2>The Lion King - Tuesday - 12:00</h2>" onclick="textSwap(this)">TUE 12:00</button>
+                    <button data-value="1" value="<h2>The Lion King - Wednesday - 18:00</h2>" onclick="textSwap(this)">WED 18:00</button>
+                    <button data-value="0" value="<h2>The Lion King - Thursday - 18:00</h2>" onclick="textSwap(this)">THU 18:00</button>
+                    <button data-value="0" value="<h2>The Lion King - Friday - 18:00</h2>" onclick="textSwap(this)">FRI 18:00</button>
+                    <button data-value="0" value="<h2>The Lion King - Saturday - 12:00</h2>" onclick="textSwap(this)">SAT 12:00</button>
+                    <button data-value="0" value="<h2>The Lion King - Sunday - 12:00</h2>" onclick="textSwap(this)">SUN 12:00</button>
                 </pa>
             </div>
         </div>
@@ -482,11 +293,11 @@
                         <!-- From https://geeks.media/avengers-endgame -->
                     </justify>
                     <br> <br> Make a Booking:
-                    <button value="<h2>The Avengers: Endgame - Wednesday - 12:00</h2>" onclick="textSwap(this)">WED 12:00</button>
-                    <button value="<h2>The Avengers: Endgame - Thursday - 12:00</h2>" onclick="textSwap(this)">THU 12:00</button>
-                    <button value="<h2>The Avengers: Endgame - Friday - 12:00</h2>" onclick="textSwap(this)">FRI 12:00</button>
-                    <button value="<h2>The Avengers: Endgame - Saturday - 21:00</h2>" onclick="textSwap(this)">SAT 21:00</button>
-                    <button value="<h2>The Avengers: Endgame - Sunday - 21:00</h2>" onclick="textSwap(this)">SUN 21:00</button>
+                    <button data-value="1" value="<h2>The Avengers: Endgame - Wednesday - 12:00</h2>" onclick="textSwap(this)">WED 12:00</button>
+                    <button data-value="1" value="<h2>The Avengers: Endgame - Thursday - 12:00</h2>" onclick="textSwap(this)">THU 12:00</button>
+                    <button data-value="1" value="<h2>The Avengers: Endgame - Friday - 12:00</h2>" onclick="textSwap(this)">FRI 12:00</button>
+                    <button data-value="0" value="<h2>The Avengers: Endgame - Saturday - 21:00</h2>" onclick="textSwap(this)">SAT 21:00</button>
+                    <button data-value="0" value="<h2>The Avengers: Endgame - Sunday - 21:00</h2>" onclick="textSwap(this)">SUN 21:00</button>
                 </pa>
             </div>
         </div>
@@ -499,39 +310,60 @@
         <pa>
             <div class="containerc">
                 <div class="container_text">
-                    <div id="bookingTitle" >
+                    <div id="bookingTitle" data-value="0">
                         <h2>Please select a movie time from Synopsis above.</h2>
                     </div>
                     <br>
-                    <div id="parent">
+                    <div id="parent" style="display: none">
                           <div id="child-left">
                               <div class="form-style-3">
                                 <!--Form 1: The prices for the ticekts-->
-                                  <form>
+                                  <form method="post" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php">
                                       <fieldset>
                                           <legend>Standard</legend>
                                           <label for="field1"><span>Adults</span>
-                                              <select name="field1" class="select-field">
+                                              <select id="stdAdult" name="field1" class="select-field" onchange="addPrices()">
                                                   <option value="0">0</option>
                                                   <option value="1">1</option>
                                                   <option value="2">2</option>
                                                   <option value="3">3</option>
+                                                  <option value="4">4</option>
+                                                  <option value="5">5</option>
+                                                  <option value="6">6</option>
+                                                  <option value="7">7</option>
+                                                  <option value="8">8</option>
+                                                  <option value="9">9</option>
+                                                  <option value="10">10</option>
                                               </select>
                                               <br>
                                               <label for="field2"><span>Concession</span>
-                                                  <select name="field2" class="select-field">
-                                                      <option value="0">0</option>
-                                                      <option value="1">1</option>
-                                                      <option value="2">2</option>
-                                                      <option value="3">3</option>
+                                                  <select id="stdConcession" name="field2" class="select-field" onchange="addPrices()">
+                                                    <option value="0">0</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
                                                   </select>
                                                   <br>
                                                   <label for="field3"><span>Children</span>
-                                                      <select name="field3" class="select-field">
-                                                          <option value="0">0</option>
-                                                          <option value="1">1</option>
-                                                          <option value="2">2</option>
-                                                          <option value="3">3</option>
+                                                      <select id="stdChild" name="field3" class="select-field" onchange="addPrices()">
+                                                        <option value="0">0</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
                                                       </select>
                                                   </label>
                                       </fieldset>
@@ -540,32 +372,52 @@
                                       <fieldset>
                                           <legend>First Class</legend>
                                           <label for="field1"><span>Adults</span>
-                                              <select name="field1" class="select-field">
-                                                  <option value="0">0</option>
-                                                  <option value="1">1</option>
-                                                  <option value="2">2</option>
-                                                  <option value="3">3</option>
+                                              <select id="fcAdult" name="field1" class="select-field" onchange="addPrices()">
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
                                               </select>
                                               <br>
                                               <label for="field2"><span>Concession</span>
-                                                  <select name="field2" class="select-field">
-                                                      <option value="0">0</option>
-                                                      <option value="1">1</option>
-                                                      <option value="2">2</option>
-                                                      <option value="3">3</option>
+                                                  <select id="fcConcession" name="field2" class="select-field" onchange="addPrices()">
+                                                    <option value="0">0</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
                                                   </select>
                                                   <br>
                                                   <label for="field3"><span>Children</span>
-                                                      <select name="field3" class="select-field">
-                                                          <option value="0">0</option>
-                                                          <option value="1">1</option>
-                                                          <option value="2">2</option>
-                                                          <option value="3">3</option>
+                                                      <select id="fcChild" name="field3" class="select-field" onchange="addPrices()">
+                                                        <option value="0">0</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
                                                       </select>
                                                   </label>
-                                                  <label style="font-weight:bolder;font-size:18px;">Total:</label>
+                                                  <label id="ticketTotal" style="font-weight:bolder;font-size:18px;">Total: </label>
                                       </fieldset>
-                                  </form>
                               </div>
                           </div>
 
@@ -573,14 +425,13 @@
 
                               <div class="form-style-3">
                                 <!-- Form 2: Customer details -->
-                                  <form action= method="post">
                                       <fieldset>
                                           <legend>Details</legend>
                                           <label for="field4"><span>Name<span class="required">*</span></span><input type="text" class="input-field" name="field4" value="" /></label>
                                           <label for="field5"><span>Email<span class="required">*</span></span><input type="email" class="input-field" name="field5" value="" /></label>
                                           <label for="field6"><span>Mobile<span class="required">*</span></span><input type="text" class="input-field" name="field6" value="" /></label>
                                           <label for="field7"><span>Credit Card<span class="required">*</span></span><input type="text" class="input-field" name="field7" value="" /></label>
-                                          <label for="field8"><span>Expiry</span>
+                                          <label for="field8"><span>Expiry<span class="required">*</span></span>
                                               <select name="field8" class="select-field">
                                                   <option value="0">10-2019</option>
                                                   <option value="1">11-2019</option>
@@ -612,17 +463,22 @@
                                                   <option value="3">12-2021</option>
                                               </select>
                                           </label>
-                                          <a input type="submit" value="Submit" class="navbuttonc">Order</a>
+                                          <br>
+                                          <input type="submit" value="Order" id="subResBtn">
+                                          <input type="reset" value="Reset" id="subResBtn">
                                         </fieldset>
                                       </form>
                               </div>
                           </div>
                       </div>
                   </div>
+                  <center><img id="placeholder" src="../../media/lunardo_logo_s3541341" width="75%"></center>
           </pa>
 
           <br>
           <br>
+
+
 
     </main>
 
