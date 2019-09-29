@@ -28,16 +28,16 @@
     <nav>
         <center>
             <h3>
-                <a id="aboutNav" href="#about_us" class="navbuttona">About Us</a>
-                <a id="pricesNav" href="#prices" class="navbuttona">Prices<a>
-                <a id="showingNav" href="#now_showing" class="navbuttona">Now Showing</a>
-                <a id="bookingNav" href="#booking" class="navbuttona">Booking</a>
+                <!-- Instantiating the function used to toggle the navigation buttons on and off when clicked -->
+                <a id="aboutNav" href="#about_us" class="navbuttona" onclick="toggleAbout()">About Us</a>
+                <a id="priceNav" href="#prices" class="navbuttona" onclick="togglePrice()">Prices</a>
+                <a id="showingNav" href="#now_showing" class="navbuttona" onclick="toggleShowing()">Now Showing</a>
+                <a id="bookingNav" href="#booking" class="navbuttona" onclick="toggleBooking()">Booking</a>
             </h3>
         </center>
     </nav>
 
     <main>
-
         <div>
             <h2 id='about_us'>About Us</h2>
         </div>
@@ -310,69 +310,20 @@
         <pa>
             <div class="containerc">
                 <div class="container_text">
+                    <!-- Assigning a data value for use in addPrices function -->
                     <div id="bookingTitle" data-value="0">
                         <h2>Please select a movie time from Synopsis above.</h2>
                     </div>
                     <br>
                     <div id="parent" style="display: none">
-                          <div id="child-left">
-                              <div class="form-style-3">
+                        <div id="child-left">
+                            <div class="form-style-3">
                                 <!--Form 1: The prices for the ticekts-->
-                                  <form method="post" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php">
-                                      <fieldset>
-                                          <legend>Standard</legend>
-                                          <label for="field1"><span>Adults</span>
-                                              <select id="stdAdult" name="field1" class="select-field" onchange="addPrices()">
-                                                  <option value="0">0</option>
-                                                  <option value="1">1</option>
-                                                  <option value="2">2</option>
-                                                  <option value="3">3</option>
-                                                  <option value="4">4</option>
-                                                  <option value="5">5</option>
-                                                  <option value="6">6</option>
-                                                  <option value="7">7</option>
-                                                  <option value="8">8</option>
-                                                  <option value="9">9</option>
-                                                  <option value="10">10</option>
-                                              </select>
-                                              <br>
-                                              <label for="field2"><span>Concession</span>
-                                                  <select id="stdConcession" name="field2" class="select-field" onchange="addPrices()">
-                                                    <option value="0">0</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4">4</option>
-                                                    <option value="5">5</option>
-                                                    <option value="6">6</option>
-                                                    <option value="7">7</option>
-                                                    <option value="8">8</option>
-                                                    <option value="9">9</option>
-                                                    <option value="10">10</option>
-                                                  </select>
-                                                  <br>
-                                                  <label for="field3"><span>Children</span>
-                                                      <select id="stdChild" name="field3" class="select-field" onchange="addPrices()">
-                                                        <option value="0">0</option>
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4">4</option>
-                                                        <option value="5">5</option>
-                                                        <option value="6">6</option>
-                                                        <option value="7">7</option>
-                                                        <option value="8">8</option>
-                                                        <option value="9">9</option>
-                                                        <option value="10">10</option>
-                                                      </select>
-                                                  </label>
-                                      </fieldset>
-                              </div>
-                              <div class="form-style-3">
-                                      <fieldset>
-                                          <legend>First Class</legend>
-                                          <label for="field1"><span>Adults</span>
-                                              <select id="fcAdult" name="field1" class="select-field" onchange="addPrices()">
+                                <form method="post" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" onsubmit="return validateForm()">
+                                    <fieldset>
+                                        <legend>Standard</legend>
+                                        <label for="seats[STA]"><span>Adults</span>
+                                            <select id="stdAdult" name="seats[STA]" class="select-field" onchange="addPrices()">
                                                 <option value="0">0</option>
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
@@ -384,10 +335,10 @@
                                                 <option value="8">8</option>
                                                 <option value="9">9</option>
                                                 <option value="10">10</option>
-                                              </select>
-                                              <br>
-                                              <label for="field2"><span>Concession</span>
-                                                  <select id="fcConcession" name="field2" class="select-field" onchange="addPrices()">
+                                            </select>
+                                            <br>
+                                            <label for="seats[STP]"><span>Concession</span>
+                                                <select id="stdConcession" name="seats[STP]" class="select-field" onchange="addPrices()">
                                                     <option value="0">0</option>
                                                     <option value="1">1</option>
                                                     <option value="2">2</option>
@@ -399,10 +350,10 @@
                                                     <option value="8">8</option>
                                                     <option value="9">9</option>
                                                     <option value="10">10</option>
-                                                  </select>
-                                                  <br>
-                                                  <label for="field3"><span>Children</span>
-                                                      <select id="fcChild" name="field3" class="select-field" onchange="addPrices()">
+                                                </select>
+                                                <br>
+                                                <label for="seats[STC]"><span>Children</span>
+                                                    <select id="stdChild" name="seats[STC]" class="select-field" onchange="addPrices()">
                                                         <option value="0">0</option>
                                                         <option value="1">1</option>
                                                         <option value="2">2</option>
@@ -414,72 +365,119 @@
                                                         <option value="8">8</option>
                                                         <option value="9">9</option>
                                                         <option value="10">10</option>
-                                                      </select>
-                                                  </label>
-                                                  <label id="ticketTotal" style="font-weight:bolder;font-size:18px;">Total: </label>
-                                      </fieldset>
-                              </div>
-                          </div>
+                                                    </select>
+                                                </label>
+                                    </fieldset>
+                            </div>
+                            <div class="form-style-3">
+                                <fieldset>
+                                    <legend>First Class</legend>
+                                    <label for="seats[FCA]"><span>Adults</span>
+                                        <select id="fcAdult" name="seats[FCA]" class="select-field" onchange="addPrices()">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                        <br>
+                                        <label for="seats[FCP]"><span>Concession</span>
+                                            <select id="fcConcession" name="seats[FCP]" class="select-field" onchange="addPrices()">
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            </select>
+                                            <br>
+                                            <label for="seats[FCC]"><span>Children</span>
+                                                <select id="fcChild" name="seats[FCC]" class="select-field" onchange="addPrices()">
+                                                    <option value="0">0</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                </select>
+                                            </label>
+                                            <label id="ticketTotal" style="font-weight:bolder;font-size:18px;">Total: </label>
+                                </fieldset>
+                            </div>
+                        </div>
 
-                          <div id="child-right">
+                        <div id="child-right">
 
-                              <div class="form-style-3">
+                            <div class="form-style-3">
                                 <!-- Form 2: Customer details -->
-                                      <fieldset>
-                                          <legend>Details</legend>
-                                          <label for="field4"><span>Name<span class="required">*</span></span><input type="text" class="input-field" name="field4" value="" /></label>
-                                          <label for="field5"><span>Email<span class="required">*</span></span><input type="email" class="input-field" name="field5" value="" /></label>
-                                          <label for="field6"><span>Mobile<span class="required">*</span></span><input type="text" class="input-field" name="field6" value="" /></label>
-                                          <label for="field7"><span>Credit Card<span class="required">*</span></span><input type="text" class="input-field" name="field7" value="" /></label>
-                                          <label for="field8"><span>Expiry<span class="required">*</span></span>
-                                              <select name="field8" class="select-field">
-                                                  <option value="0">10-2019</option>
-                                                  <option value="1">11-2019</option>
-                                                  <option value="2">12-2019</option>
-                                                  <option value="3">01-2020</option>
-                                                  <option value="3">01-2020</option>
-                                                  <option value="3">02-2020</option>
-                                                  <option value="3">03-2020</option>
-                                                  <option value="3">04-2020</option>
-                                                  <option value="3">05-2020</option>
-                                                  <option value="3">06-2020</option>
-                                                  <option value="3">07-2020</option>
-                                                  <option value="3">08-2020</option>
-                                                  <option value="3">09-2020</option>
-                                                  <option value="3">10-2020</option>
-                                                  <option value="3">11-2020</option>
-                                                  <option value="3">12-2020</option>
-                                                  <option value="3">01-2021</option>
-                                                  <option value="3">02-2021</option>
-                                                  <option value="3">03-2021</option>
-                                                  <option value="3">04-2021</option>
-                                                  <option value="3">05-2021</option>
-                                                  <option value="3">06-2021</option>
-                                                  <option value="3">07-2021</option>
-                                                  <option value="3">08-2021</option>
-                                                  <option value="3">09-2021</option>
-                                                  <option value="3">10-2021</option>
-                                                  <option value="3">11-2021</option>
-                                                  <option value="3">12-2021</option>
-                                              </select>
-                                          </label>
-                                          <br>
-                                          <input type="submit" value="Order" id="subResBtn">
-                                          <input type="reset" value="Reset" id="subResBtn">
-                                        </fieldset>
-                                      </form>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <center><img id="placeholder" src="../../media/lunardo_logo_s3541341" width="75%"></center>
-          </pa>
+                                <fieldset>
+                                    <legend>Details</legend>
+                                    <label for="cust[name]"><span>Name<span class="required">*</span></span><input type="text" id="cust-name" class="input-field" name="cust[name]" value="" /></label>
+                                    <label for="cust[email]"><span>Email<span class="required">*</span></span><input type="email" name="cust[email]" class="input-field" value="" /></label>
+                                    <label for="cust[mobile]"><span>Mobile<span class="required">*</span></span><input type="text" name="cust[mobile]" class="input-field" value="" /></label>
+                                    <label for="cust[card]"><span>Credit Card<span class="required">*</span></span><input type="text" id="credit-card" name="cust[card]" class="input-field" value="" /></label>
+                                    <label for="cust[expiry]"><span>Expiry<span class="required">*</span></span>
+                                        <select name="cust[expiry]" class="select-field">
+                                            <option value="0">10-2019</option>
+                                            <option value="1">11-2019</option>
+                                            <option value="2">12-2019</option>
+                                            <option value="3">01-2020</option>
+                                            <option value="3">01-2020</option>
+                                            <option value="3">02-2020</option>
+                                            <option value="3">03-2020</option>
+                                            <option value="3">04-2020</option>
+                                            <option value="3">05-2020</option>
+                                            <option value="3">06-2020</option>
+                                            <option value="3">07-2020</option>
+                                            <option value="3">08-2020</option>
+                                            <option value="3">09-2020</option>
+                                            <option value="3">10-2020</option>
+                                            <option value="3">11-2020</option>
+                                            <option value="3">12-2020</option>
+                                            <option value="3">01-2021</option>
+                                            <option value="3">02-2021</option>
+                                            <option value="3">03-2021</option>
+                                            <option value="3">04-2021</option>
+                                            <option value="3">05-2021</option>
+                                            <option value="3">06-2021</option>
+                                            <option value="3">07-2021</option>
+                                            <option value="3">08-2021</option>
+                                            <option value="3">09-2021</option>
+                                            <option value="3">10-2021</option>
+                                            <option value="3">11-2021</option>
+                                            <option value="3">12-2021</option>
+                                        </select>
+                                    </label>
+                                    <br>
+                                    <input type="submit" value="Order" id="order" name="order">
+                                    <input type="reset" value="Reset" id="subResBtn">
+                                </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <center><img id="placeholder" src="../../media/lunardo_logo_s3541341" width="75%"></center>
+        </pa>
 
-          <br>
-          <br>
-
-
-
+        <br>
+        <br>
     </main>
 
     <footer>
