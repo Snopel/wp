@@ -118,6 +118,15 @@
       }
   }
 
+  /* The navigation bar */
+  .navbar {
+    overflow: hidden;
+    background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(66,210,255,1));
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+  }
+
   /* Effect used for navigation buttons */
   .navbuttona {
       background-color: black;
@@ -130,9 +139,10 @@
       margin: 4px 2px;
       cursor: pointer;
       text-decoration: none;
-      width: 150px;
+      width: 150px
   }
 
+/* The fake button on pressed navigation elements */
   .navDud {
       background-color: lightblue;
       border: white;

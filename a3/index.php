@@ -15,9 +15,10 @@
 
 </head>
 
-<body>
+<body >
 
     <header>
+      <br> <br> <br> <br> <br>
         <div>
             <h1>Lunardo Cinema</h1>
             <center><img src="../../media/lunardo_logo_s3541341" width="35%"></center>
@@ -25,7 +26,8 @@
         </div>
     </header>
 
-    <nav>
+    <!-- The Navigation Bar -->
+    <div id="navigation" class="navbar">
         <center>
             <h3>
                 <!-- Instantiating the function used to toggle the navigation buttons on and off when clicked -->
@@ -35,7 +37,7 @@
                 <a id="bookingNav" href="#booking" class="navbuttona" onclick="toggleBooking()">Booking</a>
             </h3>
         </center>
-    </nav>
+      </div>
 
     <main>
         <div>
