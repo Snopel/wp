@@ -1,0 +1,387 @@
+  @import url('https://fonts.googleapis.com/css?family=Hepta+Slab&display=swap');
+
+  /* A1 CSS Styles: Lunardo Webpage */
+
+  /* Use for Main Titles */
+  h1 {
+      font-family: 'Hepta Slab', serif;
+      font-weight: bolder;
+      font-size: 100px;
+      text-align: center;
+      margin: 50px;
+  }
+
+  /* Use for secondary titles */
+  h2 {
+      font-family: 'Hepta Slab', serif;
+      font size: 50px;
+      font-weight bold;
+      text-align: center;
+      margin: 25px;
+      text-decoration: none;
+      color: #000;
+  }
+
+  /* Using for link bar */
+  h3 {
+      font-family: 'Hepta Slab', serif;
+      font-size: 40px;
+      font-weight: normal;
+      text-align: center;
+  }
+
+  /* Default Text */
+  pa {
+      font-family: 'Hepta Slab', sans-serif;
+      font-size: 18px;
+      text-align: center;
+  }
+
+  /* ALIGNMENTS */
+  center {
+      text-align: center;
+  }
+
+  justify {
+      text-align: justify;
+  }
+
+
+  /* For placing images side by side */
+  .column {
+      float: left;
+      width: 25%;
+      text-align: center;
+  }
+
+  /* For displaying ticket prices */
+  list {
+      font-family: 'Hepta Slab', sans-serif;
+      font-size: 18px;
+      text-align: justify;
+  }
+
+  html {
+      scroll-behavior: smooth;
+  }
+
+  /* Background image and Parallax effect */
+  body {
+      background-image: url('../../media/background.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+  }
+
+  /* Used for Price Table */
+  table.table1,
+  table.table1 tr,
+  table.table1 td {
+      border: 1px solid black;
+      align-content: center;
+      margin: auto;
+  }
+
+  /* Used for Session Times table */
+  table.table2,
+  table.table2 tr,
+  table.table2 td {
+      border: 1px solid black;
+      align-content: center;
+      margin: auto;
+      table-layout: fixed;
+      width: 600px;
+  }
+
+  /* Containers used for Synopsis */
+  .container {
+      border: 3px solid black;
+      padding: 20px 40px 40px;
+      max-width: 600px;
+      margin: auto;
+      text-align: justify;
+
+      &__image {
+          width: 250px;
+          margin: 30px 30px 30px 0;
+          float: left;
+      }
+
+      &__text {
+          display: inline;
+
+
+
+          @media (max-width: 620px) {
+              width: 100%;
+          }
+      }
+  }
+
+  /* The navigation bar */
+  .navbar {
+    overflow: hidden;
+    background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(66,210,255,1));
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+  }
+
+  /* Effect used for navigation buttons */
+  .navbuttona {
+      background-color: black;
+      border: white;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      text-decoration: none;
+      width: 150px
+  }
+
+/* The fake button on pressed navigation elements */
+  .navDud {
+      background-color: lightblue;
+      border: white;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      text-decoration: none;
+      width: 150px;
+      pointer-events: none;
+      cursor: default;
+  }
+
+  .navbuttonb {
+      background-color: black;
+      border: white;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      font-weight: bolder;
+      margin: 4px 2px;
+      cursor: pointer;
+      text-decoration: none;
+      width: 150px;
+      border-radius: 5px;
+  }
+
+  #navbar {
+    overflow: hidden;
+  }
+
+/**/
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.content {
+  padding: 16px;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+  formBtn {
+    background-color: black;
+    border: white;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bolder;
+    margin: 4px 2px;
+    cursor: pointer;
+    text-decoration: none;
+    width: 150px;
+    border-radius: 5px;
+  }
+
+  /* A more exclusive look for the footer */
+  footer {
+      background-color: white width: 75%;
+      padding: 25px;
+      border: 5px solid black;
+      margin: 25px;
+      font-size: 16px;
+      text-align: center;
+  }
+
+  /* To change the hover colour of text for buttons */
+  a:hover {
+      color: LightBlue;
+  }
+
+
+  /* The following form-style styles are for establishing each section of the form, such as labels, input boxes, titles, fieldsets, text input */
+  .form-style-3 {
+      max-width: 300px;
+      font-family: 'Hepta Slab', serif;
+  }
+
+  .form-style-3 label {
+      display: block;
+      margin-bottom: 10px;
+  }
+
+  .form-style-3 label > span {
+      float: left;
+      width: 100px;
+      color: black;
+      font-weight: bold;
+      font-size: 13px;
+  }
+
+  .form-style-3 fieldset {
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      margin: 0px 12px 12px 0px;
+      border: 1px solid black;
+      padding: 20px;
+      background: white;
+  }
+
+  .form-style-3 fieldset legend {
+      color: black;
+      border: 1px black;
+      border-radius: 5px 5px 0px 0px;
+      -webkit-border-radius: 5px 5px 0px 0px;
+      -moz-b -radius: 5px 5px 0px 0px;
+      background: white;
+      padding: 2px 8px 3px 8px;
+      font-weight: normal;
+      font-size: 12px;
+  }
+
+  .form-style-3 textarea {
+      width: 250px;
+      height: 100px;
+  }
+
+  .form-style-3 input[type=text],
+  .form-style-3 input[type=email],
+  .form-style-3 select,
+  .form-style-3 textarea {
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      outline: none;
+      color: black;
+      padding: 4px 7px 4px 7px;
+      background: white;
+      width: 50%;
+  }
+
+  .form-style-3 input[type=submit],
+  .form-style-3 input[type=reset],
+  .form-style-3 input[type=button] {
+      font-family: 'Hepta Slab', serif;
+      font-size: 18px;
+      background: black;
+      border: 1px black;
+      padding: 5px 15px 5px 15px;
+      color: white;
+      border-radius: 5px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      font-weight: bolder;
+  }
+
+  #subResBtn:hover {
+    color: LightBlue;
+  }
+
+  /* For establishing the main form container */
+  #parent {
+      padding: 0px, auto;
+      width: 605px;
+      height: 200px;
+  }
+
+  /* Both these containers left and right are used for aligning both sections of the form */
+  #child-left {
+      float: left;
+      width: 300px;
+      height: 200px;
+  }
+
+  #child-right {
+      float: right;
+      width: 300px;
+      height: 200px;
+  }
+
+  /* Effect used for navigation buttons */
+  .navbuttonc {
+      background-color: black;
+      color: white;
+      padding: 5px 10px;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      font-weight: bolder;
+      margin: 4px 2px;
+      cursor: pointer;
+      text-decoration: none;
+      width: 150px;
+      border-radius: 5px;
+      float: center;
+  }
+
+
+  /* For the container that the form will sit in */
+  .containerc {
+      border: 3px solid black;
+      padding: 20px 80px 175px;
+      max-width: 600px;
+      margin: auto;
+      text-align: justify;
+
+      &__image {
+          width: 250px;
+          margin: 30px 30px 30px 0;
+          float: left;
+      }
+
+      &__text {
+          display: inline;
+
+
+
+          @media (max-width: 620px) {
+              width: 100%;
+          }
+      }
+  }
+
+  /* Styled indicator for total amount within form */
+  .totalindicator {
+      background-color: black;
+      color: white;
+      padding: 5px 10px;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      font-weight: bolder;
+      margin: 4px 2px;
+      cursor: pointer;
+      text-decoration: none;
+      width: 150px;
+      border-radius: 5px;
+      float: center;
+  }
