@@ -432,7 +432,7 @@
                                     <legend>Details</legend>
                                     <label for="cust[name]"><span>Name<span class="required">*</span></span><input type="text" id="cust-name" class="input-field" name="cust[name]" value="" /></label>
                                     <label for="cust[email]"><span>Email<span class="required">*</span></span><input type="email" name="cust[email]" class="input-field" value="" /></label>
-                                    <label for="cust[mobile]"><span>Mobile<span class="required">*</span></span><input type="text" name="cust[mobile]" class="input-field" value="" /></label>
+                                    <label for="cust[mobile]"><span>Mobile<span class="required">*</span></span><input type="text" name="cust[mobile]" class="input-field" value="" id="mobile" /></label>
                                     <label for="cust[card]"><span>Credit Card<span class="required">*</span></span><input type="text" id="credit-card" name="cust[card]" class="input-field" value="" /></label>
                                     <label for="cust[expiry]"><span>Expiry<span class="required">*</span></span>
                                         <select name="cust[expiry]" class="select-field">
