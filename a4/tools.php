@@ -4,6 +4,9 @@
 
 // Put your PHP functions and modules here
 
+//Allowing script to receive data from index.php
+require 'index.php';
+//Array for the required elements in the booking form
 $purchaseOrder = array(
   'CustomerName' => $cust->name,
   'Email' => $cust->email,
@@ -15,8 +18,7 @@ $purchaseOrder = array(
   'OrderNum' => $payment->id
 );
 
-
-
+//Dedicated information for the movies selected in the booking form
 $moviesObject = [
     'ACT' => [
         'title' => 'Avengers: Endgame',
@@ -87,22 +89,24 @@ $pricesObject = [
 ];
 
 function isFullOrDiscount( $day, $hour ) {
-  if ( $day == 'MON' || $day == 'WED' ) {
+  if ( $day == 'MON' || $day == 'WED'
+      || (($day != 'SAT' && $day != 'SUN') && $hour == 'T12')) {
      return 'disc';
     } else {
     return 'full';
     }
 }
 
-$days = ['MON','TUE', 'WED', 'THU', 'FRI' , 'SAT', 'SUN'];
+//Test Code for the above function:
+/*$days = ['MON','TUE', 'WED', 'THU', 'FRI' , 'SAT', 'SUN'];
 $hours = [ 'T12', 'T15', 'T18', 'T21', 'T00' ];
 
-/*foreach ( $days as $day ) {
+foreach ( $days as $day ) {
   foreach ( $hours as $hour ) {
     echo '<p>'.$day.' '.$hour.': '.isFullOrDiscount( $day, $hour ).'</p>';
-    // or this → echo "<p>$day $hour: ".isFullOrDiscount( $day, $hour )."</p>";
   }
 }*/
+
 
 function php2js( $arr, $arrName ) {
   $lineEnd="";
@@ -158,17 +162,17 @@ if ($errorsFound == 0) {
   //header('Location: index.php');
 
 
-if (isset($_POST['clear-session']) ) 
+if (isset($_POST['clear-session']) )
   unset ( $_SESSION['cust'], $_SESSION['movie'], $_SESSION['seats'] );
 
 $now = date('d/m h:i');
 $total = // calculate the total serverside and format it to 2 decimal places
-$cells = array_merge( 
-  [ $now ], 
+$cells = array_merge(
+  [ $now ],
   $_SESSION['cust'],
   $_SESSION['movie'],
   $_SESSION['seats'],
-  (array) $total 
+  (array) $total
 );
 
 

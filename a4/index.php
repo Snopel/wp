@@ -16,8 +16,8 @@
 </head>
 
 <body>
-
-    <?php include ('tools.php');?>
+  <!-- Using Include Once so variables aren't redeclared, avoiding a fatal error -->
+    <?php include_once ('tools.php');?>
 
     <header>
         <br> <br> <br> <br> <br>
