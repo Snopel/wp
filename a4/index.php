@@ -15,10 +15,12 @@
 
 </head>
 
-<body >
+<body>
+
+    <?php include ('tools.php');?>
 
     <header>
-      <br> <br> <br> <br> <br>
+        <br> <br> <br> <br> <br>
         <div>
             <h1>Lunardo Cinema</h1>
             <center><img src="../../media/lunardo_logo_s3541341" width="35%"></center>
@@ -37,7 +39,7 @@
                 <a id="bookingNav" href="#booking" class="navbuttona" onclick="toggleBooking()">Booking</a>
             </h3>
         </center>
-      </div>
+    </div>
 
     <main>
         <div>
