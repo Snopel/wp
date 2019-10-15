@@ -2,21 +2,8 @@
 // Mandatory code to begin the Session
   session_start();
 
-// Put your PHP functions and modules here
-
 //Allowing script to receive data from index.php
-require 'index.php';
-//Array for the required elements in the booking form
-$purchaseOrder = array(
-  'CustomerName' => $cust->name,
-  'Email' => $cust->email,
-  'Mobile' => $cust->mobile,
-  'Card' => $cust->card,
-  'Expiy' => $cust->expiry,
-  'Description' => 'Purchase Order Details',
-  'Amount' => $payment->amount,
-  'OrderNum' => $payment->id
-);
+require_once 'index.php';
 
 //Dedicated information for the movies selected in the booking form
 $moviesObject = [
@@ -97,6 +84,14 @@ function isFullOrDiscount( $day, $hour ) {
     }
 }
 
+function calculateGST($totalCost, $gst ) {
+    
+}
+
+function checkExpiry($custExpiry) {
+    
+}
+
 //Test Code for the above function:
 /*$days = ['MON','TUE', 'WED', 'THU', 'FRI' , 'SAT', 'SUN'];
 $hours = [ 'T12', 'T15', 'T18', 'T21', 'T00' ];
@@ -132,14 +127,15 @@ function preShow( $arr, $returnAsString=false ) {
     echo $ret;
 }
 
-$errorsFound = 0;
-$cleanName = $_POST['cust']['name'];
-$cleanEmail = $_POST['cust']['email'];
-$cleanMobile = $_POST['cust']['mobile'];
-$cleanCredit = $_POST['cust']['credit'];
-$cleanExpiry = $_POST['cust']['expiry'];
-$cleanDate = $_POST['movie']['date'];
-$cleanTime = $_POST['movie']['time'];
+if ($_POST){
+  $errorsFound = 0;
+  $cleanName = $_POST['cust']['name'];
+  $cleanEmail = $_POST['cust']['email'];
+  $cleanMobile = $_POST['cust']['mobile'];
+  $cleanCredit = $_POST['cust']['credit'];
+  $cleanExpiry = $_POST['cust']['expiry'];
+  $cleanDate = $_POST['movie']['date'];
+  $cleanTime = $_POST['movie']['time'];
 
 // if email does not pass validation, increment $errorsFound
   $errorsFound++;
@@ -147,33 +143,34 @@ $cleanTime = $_POST['movie']['time'];
 
 // if no errors are found (ie all fields ok) add clean post data to session
 // and forward to receipt.php
-if ($errorsFound == 0) {
-  $_SESSION['cust']['name'] = $cleanName;
-  $_SESSION['cust']['email'] = $cleanEmail;
-  $_SESSION['cust']['mobile'] = $cleanMobile;
-  $_SESSION['cust']['card'] = $cleanCard;
-  $_SESSION['cust']['expiry'] = $cleanExpiry;
-  $_SESSION['movie']['date'] = $cleanDate;
-  $_SESSION['movie']['time'] = $cleanTime;
-  header("Location: receipt.php");
-}
+  if ($errorsFound == 0) {
+    if($_SESSION) {
+      $_SESSION['cust']['name'] = $cleanName;
+      $_SESSION['cust']['email'] = $cleanEmail;
+      $_SESSION['cust']['mobile'] = $cleanMobile;
+      $_SESSION['cust']['card'] = $cleanCard;
+      $_SESSION['cust']['expiry'] = $cleanExpiry;
+      $_SESSION['movie']['date'] = $cleanDate;
+      $_SESSION['movie']['time'] = $cleanTime;
+      header("Location: receipt.php");
+    }
+  }
+};
 
 //if (empty( $_SESSION['cust'] || $_SESSION['movie'] || $_SESSION['seats']))
   //header('Location: index.php');
 
-
 if (isset($_POST['clear-session']) )
   unset ( $_SESSION['cust'], $_SESSION['movie'], $_SESSION['seats'] );
 
-$now = date('d/m h:i');
+/*$now = date('d/m h:i');
 $total = // calculate the total serverside and format it to 2 decimal places
 $cells = array_merge(
   [ $now ],
   $_SESSION['cust'],
   $_SESSION['movie'],
   $_SESSION['seats'],
-  (array) $total
-);
+  (array) $total);*/
 
 
 

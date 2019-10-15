@@ -11,6 +11,10 @@ function textSwap(btn) {
     x.innerHTML = btn.value;
 }
 
+function getMovieDetails(id, day, time) {
+  
+}
+
 // toggleX: Disables the clicked nav button and enables the rest
 function toggleAbout() {
     //Exchange the button for a dud which can't be clicked

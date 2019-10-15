@@ -12,12 +12,12 @@
     <script src='../wireframe.js'></script>
     <!-- Instantiating the Script for use in this HTML file -->
     <script src='script.js'></script>
+    <!-- Using Include Once so variables aren't redeclared, avoiding a fatal error -->
+      <?php include_once ('tools.php');?>
 
 </head>
 
 <body>
-  <!-- Using Include Once so variables aren't redeclared, avoiding a fatal error -->
-    <?php include_once ('tools.php');?>
 
     <header>
         <br> <br> <br> <br> <br>
@@ -243,7 +243,7 @@
                          - Value is what the text will change to.
                          - Data Value is a trigger for the discount value, which is utilised in 'addPrices'. -->
 
-                    <button data-value="1" value="<h2>Midsommar - Wednesday - 21:00</h2>" onclick="textSwap(this)">WED 21:00</button>
+                    <button data-value="1" value="<h2>Midsommar - Wednesday - 21:00</h2>" onclick="textSwap(this); getMovieDetails(AHF,WED,T21)">WED 21:00</button>
                     <button data-value="0" value="<h2>Midsommar - Thursday - 21:00</h2>" onclick="textSwap(this)">THU 21:00</button>
                     <button data-value="0" value="<h2>Midsommar - Friday - 21:00</h2>" onclick="textSwap(this)">FRI 21:00</button>
                     <button data-value="0" value="<h2>Midsommar - Saturday - 18:00</h2>" onclick="textSwap(this)">SAT 18:00</button>
@@ -323,7 +323,7 @@
                         <div id="child-left">
                             <div class="form-style-3">
                                 <!--Form 1: The prices for the ticekts-->
-                                <form method="post" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" onsubmit="return validateForm()">
+                                <form method="post" action='' onsubmit="return validateForm()">
                                     <fieldset>
                                         <legend>Standard</legend>
                                         <label for="seats[STA]"><span>Adults</span>
@@ -491,6 +491,9 @@
 
             </script> Bylball Interactive - Nicholas Balliro (S3541341), Sarah Bylmakers (S3736964). Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
         <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
+        <br>
+        <li><a href="a4/tickets.php" target="_blank">TicketTest</a></li>
+        <li><a href="a4/receipt.php" target="_blank">ReceiptTest</a></li>
         <br>
         <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
     </footer>
