@@ -1,106 +1,253 @@
-<?php
+    <?php
+  session_start();
+$date = date("m.d.y");
 
-// Mandatory code to begin the Session
-session_start();
-
-//Allowing script to receive data from tools.php
-require_once 'tools.php';
-
-		$prd=$_GET['prd'];
-		$qty=$_GET['qty'];
-		$rate=0;
-		$img="";
-
-		/*if($prd=="cust[name]")
-		{
-			$custName=cust[name];
-		}
-		else if($prd=="cust[email]")
-		{
-			$cemail=cust[email];
-		}
-		else if($prd=="cust[mobile]")
-		{
-			$cmobile=cust[mobile];
-		}
-		else if($prd=="cust[card]")
-		{
-			$ccard=cust[card];
-		}
-        else if($prd=="cust[expiry]")
-		{
-			$cexpiry=expiry;
-		}*/
-	?>
+?>
 
 <!DOCTYPE html>
-<html lang='en'>
+<html>
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Receipt</title>
-
-    <!-- Keep wireframe.css for debugging, add your css to style.css -->
-    <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
-    <link id='stylecss' type="text/css" rel="stylesheet" href="style.css">
-    <script src='../wireframe.js'></script>
-    <!-- Instantiating the Script for use in this HTML file -->
-    <script src='script.js'></script>
-    <!-- Using Include Once so variables aren't redeclared, avoiding a fatal error -->
-    <?php include_once ('tools.php');?>
-
+    <title>Lunaro Cinemas Receipt</title>
 </head>
 
 <style>
-    @media print {
-        body {
-            width: 21cm;
-            height: 29.7cm;
-            margin: 30mm 45mm 30mm 45mm;
+    .invoice-box {
+        max-width: 800px;
+        margin: auto;
+        padding: 30px;
+        border: 1px solid #eee;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+        font-size: 16px;
+        line-height: 24px;
+        font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+        color: #555;
+    }
+
+    .invoice-box table {
+        width: 100%;
+        line-height: inherit;
+        text-align: left;
+    }
+
+    .invoice-box table td {
+        padding: 5px;
+        vertical-align: top;
+    }
+
+    .invoice-box table tr td:nth-child(2) {
+        text-align: right;
+    }
+
+    .invoice-box table tr.top table td {
+        padding-bottom: 20px;
+    }
+
+    .invoice-box table tr.top table td.title {
+        font-size: 45px;
+        line-height: 45px;
+        color: #333;
+    }
+
+    .invoice-box table tr.information table td {
+        padding-bottom: 40px;
+    }
+
+    .invoice-box table tr.heading td {
+        background: #eee;
+        border-bottom: 1px solid #ddd;
+        font-weight: bold;
+    }
+
+    .invoice-box table tr.details td {
+        padding-bottom: 20px;
+    }
+
+    .invoice-box table tr.item td {
+        border-bottom: 1px solid #eee;
+    }
+
+    .invoice-box table tr.item.last td {
+        border-bottom: none;
+    }
+
+    .invoice-box table tr.total td:nth-child(2) {
+        border-top: 2px solid #eee;
+        font-weight: bold;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .invoice-box table tr.top table td {
+            width: 100%;
+            display: block;
+            text-align: center;
         }
+
+        .invoice-box table tr.information table td {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+    }
+
+    /** RTL **/
+    .rtl {
+        direction: rtl;
+        font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+    }
+
+    .rtl table {
+        text-align: right;
+    }
+
+    .rtl table tr td:nth-child(2) {
+        text-align: left;
     }
 
 </style>
 
-<center>
-    <table border=1 width=70%>
-        <caption>
-            <h1>Lunardo Cinemas Pty Ltd</h1>
-            <h2>ABN: 00 123 456 789</h2>
-        </caption>
-        <br><br>
+<body>
+    <div class="invoice-box">
+        <table cellpadding="0" cellspacing="0">
+            <tr class="top">
+                <td colspan="2">
+                    <table>
+                        <tr>
+                            <td class="title">
+                                <img src="../../media/lunardo_logo_s3541341" width="15%">
+                            </td>
 
-        <tr>
-            <th>Customer Name</th>
-            <th>Film</th>
-            <th>Session Time</th>
-            <th>Seat Details</th>
-            <th>Ticket Quantity</th>
-            <th>Total Cost (Including 9.09% GST)</th>
-        </tr>
+                            <td>
+                                Customer Invoice<br>
+                                Created: <?php echo $date ?>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
 
-        <tr>
-            <td>
-                <?php echo "$custName";?>
-            </td>
-            <td>
-                <?php echo "$filmName";?>
-            </td>
-            <td>
-                <?php echo "$sessionTime";?>
-            </td>
-            <td>
-                <?php echo "$seatDetails";?>
-            </td>
-            <td>
-                <?php echo "$ticketQuantity";?>
-            </td>
-            <td>
-                <?php echo "$totalCost";?>
-            </td>
-        </tr>
-    </table>
-</center>
+            <tr class="information">
+                <td colspan="2">
+                    <table>
+                        <tr>
+                            <td>
+                                Lunardo Cinemas, Inc.<br>
+                                ABN: 00 123 456 789<br>
+                                Melbourne, VIC 3000
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr class="heading">
+                <td>
+                    Customer Details
+                </td>
+
+                <td>
+                    Values
+                </td>
+            </tr>
+
+            <tr class="item">
+                <td>
+                    Name
+                </td>
+
+                <td>
+
+                </td>
+            </tr>
+            <tr class="item">
+                <td>
+                    Email
+                </td>
+
+                <td>
+
+                </td>
+            </tr>
+            <tr class="item">
+                <td>
+                    Mobile
+                </td>
+
+                <td>
+
+                </td>
+            </tr>
+            <tr class="item">
+                <td>
+                    Card Number
+                </td>
+
+                <td>
+
+                </td>
+            </tr>
+            <tr class="item">
+                <td>
+                    Expiry
+                </td>
+
+                <td>
+
+                </td>
+            </tr>
+
+            <tr class="heading">
+                <td>
+                    Order Details
+                </td>
+
+                <td>
+                    Values
+                </td>
+            </tr>
+
+            <tr class="item">
+                <td>
+                    Film
+                </td>
+
+                <td>
+
+                </td>
+            </tr>
+
+            <tr class="item">
+                <td>
+                    Session Time
+                </td>
+
+                <td>
+
+                </td>
+            </tr>
+
+            <tr class="item last">
+                <td>
+                    Tickets
+                </td>
+
+                <td>
+
+                </td>
+            </tr>
+
+            <tr class="total">
+                <td></td>
+
+                <td>
+                    Total: 
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
 
 </html>
+
+

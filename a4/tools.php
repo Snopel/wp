@@ -85,11 +85,11 @@ function isFullOrDiscount( $day, $hour ) {
 }
 
 function calculateGST($totalCost, $gst ) {
-    
+
 }
 
 function checkExpiry($custExpiry) {
-    
+
 }
 
 //Test Code for the above function:

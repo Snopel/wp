@@ -323,7 +323,7 @@
                         <div id="child-left">
                             <div class="form-style-3">
                                 <!--Form 1: The prices for the ticekts-->
-                                <form method="post" action='' onsubmit="return validateForm()">
+                                <form method="post" action='receipt.php' onsubmit="return validateForm()">
                                     <fieldset>
                                         <legend>Standard</legend>
                                         <label for="seats[STA]"><span>Adults</span>
@@ -492,8 +492,8 @@
             </script> Bylball Interactive - Nicholas Balliro (S3541341), Sarah Bylmakers (S3736964). Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
         <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
         <br>
-        <li><a href="a4/tickets.php" target="_blank">TicketTest</a></li>
-        <li><a href="a4/receipt.php" target="_blank">ReceiptTest</a></li>
+        <li><a href="ticket.php" target="_blank">TicketTest</a></li>
+        <li><a href="receipt.php" target="_blank">ReceiptTest</a></li>
         <br>
         <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
     </footer>
