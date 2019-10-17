@@ -136,15 +136,12 @@ if ($_POST){
   $cleanExpiry = $_POST['cust']['expiry'];
   $cleanDate = $_POST['movie']['date'];
   $cleanTime = $_POST['movie']['time'];
-}
 
 // if email does not pass validation, increment $errorsFound
 // repeat for other cust POST data, incrementing $errorsFound when validation fails
-
-
 // if no errors are found (ie all fields ok) add clean post data to session
 // and forward to receipt.php
-  if ($errorsFound == 0) {
+ if ($errorsFound == 0) {
       $_SESSION['cust']['name'] = $cleanName;
       $_SESSION['cust']['email'] = $cleanEmail;
       $_SESSION['cust']['mobile'] = $cleanMobile;
@@ -152,14 +149,14 @@ if ($_POST){
       $_SESSION['cust']['expiry'] = $cleanExpiry;
       $_SESSION['movie']['date'] = $cleanDate;
       $_SESSION['movie']['time'] = $cleanTime;
-  };
+  }
+};
 
 //if (empty( $_SESSION['cust'] || $_SESSION['movie'] || $_SESSION['seats']))
-  //header('Location: index.php');
+//  header('Location: index.php');
 
 if (isset($_POST['clear-session']) )
   unset ( $_SESSION['cust'], $_SESSION['movie'], $_SESSION['seats'] );
-
 /*$now = date('d/m h:i');
 $total = // calculate the total serverside and format it to 2 decimal places
 $cells = array_merge(
@@ -168,7 +165,6 @@ $cells = array_merge(
   $_SESSION['movie'],
   $_SESSION['seats'],
   (array) $total);*/
-}
 
 
 

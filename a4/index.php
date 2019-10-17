@@ -470,7 +470,7 @@
                                     </label>
                                     <br>
                                     <input type="submit" value="Order" id="order" name="order">
-                                    <input type="reset" value="Reset" id="subResBtn">
+                                    <input type='submit' name='session-reset' value='Reset'>
                                 </fieldset>
                                 </form>
                             </div>
@@ -479,9 +479,21 @@
                 </div>
                 <center><img id="placeholder" src="../../media/lunardo_logo_s3541341" width="75%"></center>
         </pa>
+      </div>
 
         <br>
         <br>
+        <h2><center>Debug Module</center></h2>
+          <br>
+          <?php
+          preShow($_POST);
+
+          preShow($_SESSION);
+          ?>
+
+          <br><br>
+
+
     </main>
 
     <footer>

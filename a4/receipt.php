@@ -161,7 +161,7 @@
                     </td>
 
                     <td>
-                        <?php echo $_SESSION['$cleanName']; ?>
+                        <?php echo $_SESSION["cleanName"]; ?>
                     </td>
                 </tr>
                 <tr class="item">
