@@ -136,15 +136,15 @@ if ($_POST){
   $cleanExpiry = $_POST['cust']['expiry'];
   $cleanDate = $_POST['movie']['date'];
   $cleanTime = $_POST['movie']['time'];
+}
 
 // if email does not pass validation, increment $errorsFound
-  $errorsFound++;
 // repeat for other cust POST data, incrementing $errorsFound when validation fails
+
 
 // if no errors are found (ie all fields ok) add clean post data to session
 // and forward to receipt.php
   if ($errorsFound == 0) {
-    if($_SESSION) {
       $_SESSION['cust']['name'] = $cleanName;
       $_SESSION['cust']['email'] = $cleanEmail;
       $_SESSION['cust']['mobile'] = $cleanMobile;
@@ -152,10 +152,7 @@ if ($_POST){
       $_SESSION['cust']['expiry'] = $cleanExpiry;
       $_SESSION['movie']['date'] = $cleanDate;
       $_SESSION['movie']['time'] = $cleanTime;
-      header("Location: receipt.php");
-    }
-  }
-};
+  };
 
 //if (empty( $_SESSION['cust'] || $_SESSION['movie'] || $_SESSION['seats']))
   //header('Location: index.php');
@@ -171,7 +168,7 @@ $cells = array_merge(
   $_SESSION['movie'],
   $_SESSION['seats'],
   (array) $total);*/
-
+}
 
 
 

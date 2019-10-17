@@ -1,253 +1,256 @@
     <?php
+
   session_start();
-$date = date("m.d.y");
+
+      $date = date("d.m.y");
 
 ?>
 
-<!DOCTYPE html>
-<html>
+    <!DOCTYPE html>
+    <html>
 
-<head>
-    <meta charset="utf-8">
-    <title>Lunaro Cinemas Receipt</title>
-</head>
+    <head>
+        <meta charset="utf-8">
+        <title>Lunaro Cinemas Receipt</title>
+    </head>
 
-<style>
-    .invoice-box {
-        max-width: 800px;
-        margin: auto;
-        padding: 30px;
-        border: 1px solid #eee;
-        box-shadow: 0 0 10px rgba(0, 0, 0, .15);
-        font-size: 16px;
-        line-height: 24px;
-        font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
-        color: #555;
-    }
+    <style>
+        .invoice-box {
+            width: 29.7cm;
+            height: 21cm;
+            max-width: 800px;
+            margin: auto;
+            padding: 30px;
+            border: 1px solid #eee;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+            font-size: 16px;
+            line-height: 24px;
+            font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+            color: #555;
+        }
 
-    .invoice-box table {
-        width: 100%;
-        line-height: inherit;
-        text-align: left;
-    }
-
-    .invoice-box table td {
-        padding: 5px;
-        vertical-align: top;
-    }
-
-    .invoice-box table tr td:nth-child(2) {
-        text-align: right;
-    }
-
-    .invoice-box table tr.top table td {
-        padding-bottom: 20px;
-    }
-
-    .invoice-box table tr.top table td.title {
-        font-size: 45px;
-        line-height: 45px;
-        color: #333;
-    }
-
-    .invoice-box table tr.information table td {
-        padding-bottom: 40px;
-    }
-
-    .invoice-box table tr.heading td {
-        background: #eee;
-        border-bottom: 1px solid #ddd;
-        font-weight: bold;
-    }
-
-    .invoice-box table tr.details td {
-        padding-bottom: 20px;
-    }
-
-    .invoice-box table tr.item td {
-        border-bottom: 1px solid #eee;
-    }
-
-    .invoice-box table tr.item.last td {
-        border-bottom: none;
-    }
-
-    .invoice-box table tr.total td:nth-child(2) {
-        border-top: 2px solid #eee;
-        font-weight: bold;
-    }
-
-    @media only screen and (max-width: 600px) {
-        .invoice-box table tr.top table td {
+        .invoice-box table {
             width: 100%;
-            display: block;
-            text-align: center;
+            line-height: inherit;
+            text-align: left;
+        }
+
+        .invoice-box table td {
+            padding: 5px;
+            vertical-align: top;
+        }
+
+        .invoice-box table tr td:nth-child(2) {
+            text-align: right;
+        }
+
+        .invoice-box table tr.top table td {
+            padding-bottom: 20px;
+        }
+
+        .invoice-box table tr.top table td.title {
+            font-size: 45px;
+            line-height: 45px;
+            color: #333;
         }
 
         .invoice-box table tr.information table td {
-            width: 100%;
-            display: block;
-            text-align: center;
+            padding-bottom: 40px;
         }
-    }
 
-    /** RTL **/
-    .rtl {
-        direction: rtl;
-        font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
-    }
+        .invoice-box table tr.heading td {
+            background: #eee;
+            border-bottom: 1px solid #ddd;
+            font-weight: bold;
+        }
 
-    .rtl table {
-        text-align: right;
-    }
+        .invoice-box table tr.details td {
+            padding-bottom: 20px;
+        }
 
-    .rtl table tr td:nth-child(2) {
-        text-align: left;
-    }
+        .invoice-box table tr.item td {
+            border-bottom: 1px solid #eee;
+        }
 
-</style>
+        .invoice-box table tr.item.last td {
+            border-bottom: none;
+        }
 
-<body>
-    <div class="invoice-box">
-        <table cellpadding="0" cellspacing="0">
-            <tr class="top">
-                <td colspan="2">
-                    <table>
-                        <tr>
-                            <td class="title">
-                                <img src="../../media/lunardo_logo_s3541341" width="15%">
-                            </td>
+        .invoice-box table tr.total td:nth-child(2) {
+            border-top: 2px solid #eee;
+            font-weight: bold;
+        }
 
-                            <td>
-                                Customer Invoice<br>
-                                Created: <?php echo $date ?>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
+        @media only screen and (max-width: 600px) {
+            .invoice-box table tr.top table td {
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
 
-            <tr class="information">
-                <td colspan="2">
-                    <table>
-                        <tr>
-                            <td>
-                                Lunardo Cinemas, Inc.<br>
-                                ABN: 00 123 456 789<br>
-                                Melbourne, VIC 3000
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
+            .invoice-box table tr.information table td {
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
+        }
 
-            <tr class="heading">
-                <td>
-                    Customer Details
-                </td>
+        /** RTL **/
+        .rtl {
+            direction: rtl;
+            font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+        }
 
-                <td>
-                    Values
-                </td>
-            </tr>
+        .rtl table {
+            text-align: right;
+        }
 
-            <tr class="item">
-                <td>
-                    Name
-                </td>
+        .rtl table tr td:nth-child(2) {
+            text-align: left;
+        }
 
-                <td>
+    </style>
 
-                </td>
-            </tr>
-            <tr class="item">
-                <td>
-                    Email
-                </td>
+    <body>
+        <div class="invoice-box">
+            <table cellpadding="0" cellspacing="0">
+                <tr class="top">
+                    <td colspan="2">
+                        <table>
+                            <tr>
+                                <td class="title">
+                                    <img src="../../media/lunardo_logo_s3541341" width="15%">
+                                </td>
 
-                <td>
+                                <td>
+                                    Customer Invoice<br>
+                                    Created: <?php echo $date ?>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
 
-                </td>
-            </tr>
-            <tr class="item">
-                <td>
-                    Mobile
-                </td>
+                <tr class="information">
+                    <td colspan="2">
+                        <table>
+                            <tr>
+                                <td>
+                                    Lunardo Cinemas, Inc.<br>
+                                    ABN: 00 123 456 789<br>
+                                    Melbourne, VIC 3000
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
 
-                <td>
+                <tr class="heading">
+                    <td>
+                        Customer Details
+                    </td>
 
-                </td>
-            </tr>
-            <tr class="item">
-                <td>
-                    Card Number
-                </td>
+                    <td>
+                        Values
+                    </td>
+                </tr>
 
-                <td>
+                <tr class="item">
+                    <td>
+                        Name
+                    </td>
 
-                </td>
-            </tr>
-            <tr class="item">
-                <td>
-                    Expiry
-                </td>
+                    <td>
+                        <?php echo $_SESSION['$cleanName']; ?>
+                    </td>
+                </tr>
+                <tr class="item">
+                    <td>
+                        Email
+                    </td>
 
-                <td>
+                    <td>
+                        <?php echo $_SESSION['$cleanEmail']; ?>
+                    </td>
+                </tr>
+                <tr class="item">
+                    <td>
+                        Mobile
+                    </td>
 
-                </td>
-            </tr>
+                    <td>
+                        <?php echo $_SESSION['$cleanMobile']; ?>
+                    </td>
+                </tr>
+                <tr class="item">
+                    <td>
+                        Card Number
+                    </td>
 
-            <tr class="heading">
-                <td>
-                    Order Details
-                </td>
+                    <td>
+                        <?php echo $_SESSION['$cleanCard']; ?>
+                    </td>
+                </tr>
+                <tr class="item">
+                    <td>
+                        Expiry
+                    </td>
 
-                <td>
-                    Values
-                </td>
-            </tr>
+                    <td>
+                        <?php echo $_SESSION['$cleanExpiry']; ?>
+                    </td>
+                </tr>
 
-            <tr class="item">
-                <td>
-                    Film
-                </td>
+                <tr class="heading">
+                    <td>
+                        Order Details
+                    </td>
 
-                <td>
+                    <td>
+                        Values
+                    </td>
+                </tr>
 
-                </td>
-            </tr>
+                <tr class="item">
+                    <td>
+                        Film
+                    </td>
 
-            <tr class="item">
-                <td>
-                    Session Time
-                </td>
+                    <td>
+                        <?php echo $_SESSION['$cleanFilm']; ?>
+                    </td>
+                </tr>
 
-                <td>
+                <tr class="item">
+                    <td>
+                        Session Time
+                    </td>
 
-                </td>
-            </tr>
+                    <td>
+                        <?php echo $_SESSION['$cleanSession']; ?>
+                    </td>
+                </tr>
 
-            <tr class="item last">
-                <td>
-                    Tickets
-                </td>
+                <tr class="item last">
+                    <td>
+                        Tickets
+                    </td>
 
-                <td>
+                    <td>
+                        <?php echo $_SESSION['$cleanTicket']; ?>
+                    </td>
+                </tr>
 
-                </td>
-            </tr>
+                <tr class="total">
+                    <td></td>
 
-            <tr class="total">
-                <td></td>
+                    <td>
+                        Total (Including GST):
+                        <!-- Add GST to the total add function and somehow call it in -->
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
 
-                <td>
-                    Total: 
-                </td>
-            </tr>
-        </table>
-    </div>
-</body>
-
-</html>
-
-
+    </html>
