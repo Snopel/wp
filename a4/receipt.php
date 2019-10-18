@@ -1,8 +1,14 @@
     <?php
-
-  session_start();
+      session_start();
 
       $date = date("d.m.y");
+
+      //Total price of the tickets
+      $totalPrice = substr($_SESSION["totalprice"], 1);
+      $fTotalPrice = floatval($totalPrice);
+      $gstPrice = ($fTotalPrice * 0.0909);
+      $finalPrice = number_format(($fTotalPrice + $gstPrice), 2);
+
 
 ?>
 
@@ -161,7 +167,7 @@
                     </td>
 
                     <td>
-                        <?php echo $_SESSION["cleanName"]; ?>
+                        <?php echo $_SESSION["cust"]["name"]; ?>
                     </td>
                 </tr>
                 <tr class="item">
@@ -170,7 +176,7 @@
                     </td>
 
                     <td>
-                        <?php echo $_SESSION['$cleanEmail']; ?>
+                        <?php echo $_SESSION["cust"]["email"]; ?>
                     </td>
                 </tr>
                 <tr class="item">
@@ -179,7 +185,7 @@
                     </td>
 
                     <td>
-                        <?php echo $_SESSION['$cleanMobile']; ?>
+                        <?php echo $_SESSION["cust"]["mobile"]; ?>
                     </td>
                 </tr>
                 <tr class="item">
@@ -188,7 +194,7 @@
                     </td>
 
                     <td>
-                        <?php echo $_SESSION['$cleanCard']; ?>
+                        <?php echo $_SESSION["cust"]["card"] ?>
                     </td>
                 </tr>
                 <tr class="item">
@@ -197,7 +203,7 @@
                     </td>
 
                     <td>
-                        <?php echo $_SESSION['$cleanExpiry']; ?>
+                        <?php echo $_SESSION["cust"]["expiry"]; ?>
                     </td>
                 </tr>
 
@@ -245,7 +251,7 @@
                     <td></td>
 
                     <td>
-                        Total (Including GST):
+                        Total (Including GST): $<?php echo $finalPrice; ?>
                         <!-- Add GST to the total add function and somehow call it in -->
                     </td>
                 </tr>

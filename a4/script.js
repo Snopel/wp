@@ -12,7 +12,7 @@ function textSwap(btn) {
 }
 
 function getMovieDetails(id, day, time) {
-  
+
 }
 
 // toggleX: Disables the clicked nav button and enables the rest
@@ -123,7 +123,7 @@ function addPrices() {
     //Adding up all the tickets
     total = (stdAdult + stdConcession + stdChild + fcAdult + fcConcession + fcChild).toFixed(2);
     //Changing the Total displayed in the form to the correct number
-    document.getElementById("ticketTotal").innerHTML = "Total: $" + total;
+    document.getElementById("ticketTotal").value = "$" + total;
 }
 
 /* Validates the data from the phone input, and provides an alert if incorrect */

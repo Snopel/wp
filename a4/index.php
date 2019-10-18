@@ -323,7 +323,7 @@
                         <div id="child-left">
                             <div class="form-style-3">
                                 <!--Form 1: The prices for the ticekts-->
-                                <form method="post" action='receipt.php' onsubmit="return validateForm()">
+                                <form method="post" action='' onsubmit="return validateForm()">
                                     <fieldset>
                                         <legend>Standard</legend>
                                         <label for="seats[STA]"><span>Adults</span>
@@ -421,7 +421,7 @@
                                                     <option value="10">10</option>
                                                 </select>
                                             </label>
-                                            <label id="ticketTotal" style="font-weight:bolder;font-size:18px;">Total: </label>
+                                            <label style="font-weight:bolder;font-size:18px;">Total: <input type="text" id="ticketTotal" class="input-field" name="totalprice" value="" readonly/></label>
                                 </fieldset>
                             </div>
                         </div>
@@ -470,7 +470,7 @@
                                     </label>
                                     <br>
                                     <input type="submit" value="Order" id="order" name="order">
-                                    <input type='submit' name='session-reset' value='Reset'>
+                                    <input type='reset' name='Reset' value='Reset'>
                                 </fieldset>
                                 </form>
                             </div>
@@ -485,9 +485,13 @@
         <br>
         <h2><center>Debug Module</center></h2>
           <br>
+          <form class="" action="" method="post">
+            <input type="submit" value="Reset Session" name="reset-session">
+          </form>
           <?php
+          echo "Post:";
           preShow($_POST);
-
+          echo "Session:";
           preShow($_SESSION);
           ?>
 

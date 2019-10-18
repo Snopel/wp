@@ -127,12 +127,17 @@ function preShow( $arr, $returnAsString=false ) {
     echo $ret;
 }
 
-if ($_POST){
+
+if($_POST){
+  $_SESSION["cust"] = $_POST["cust"];
+  $_SESSION["totalprice"] = $_POST["totalprice"];
+  }
+/*if ($_POST){
   $errorsFound = 0;
   $cleanName = $_POST['cust']['name'];
   $cleanEmail = $_POST['cust']['email'];
   $cleanMobile = $_POST['cust']['mobile'];
-  $cleanCredit = $_POST['cust']['credit'];
+  $cleanCredit = $_POST['cust']['card'];
   $cleanExpiry = $_POST['cust']['expiry'];
   $cleanDate = $_POST['movie']['date'];
   $cleanTime = $_POST['movie']['time'];
@@ -150,7 +155,7 @@ if ($_POST){
       $_SESSION['movie']['date'] = $cleanDate;
       $_SESSION['movie']['time'] = $cleanTime;
   }
-};
+};*/
 
 //if (empty( $_SESSION['cust'] || $_SESSION['movie'] || $_SESSION['seats']))
 //  header('Location: index.php');
