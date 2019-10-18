@@ -3,11 +3,89 @@
 
       $date = date("d.m.y");
 
-      //Total price of the tickets
+      //Movie Title, Day and Hour display functions
+      function phpMovieTitle($id){
+        switch($id){
+          case 'AHF':
+            echo 'Midsommar';
+            break;
+          case 'RMC':
+            echo 'Once Upon A Time In Hollywood';
+            break;
+          case 'ANM':
+            echo 'The Lion King';
+            break;
+          case 'ACT':
+            echo 'The Avengers: Endgame';
+            break;
+          default:
+            break;
+          }
+        }
+      function phpMovieDay($day){
+        switch($day){
+          case 'MON':
+            echo 'Monday ';
+            break;
+          case 'TUE':
+            echo 'Tuesday ';
+            break;
+          case 'WED':
+            echo 'Wednesday ';
+            break;
+          case 'THU':
+            echo 'Thursday ';
+            break;
+          case 'FRI':
+            echo 'Friday ';
+            break;
+          case 'SAT':
+            echo 'Saturday ';
+            break;
+          case 'SUN':
+            echo 'Sunday ';
+            break;
+          default:
+            break;
+        }
+      }
+      function phpMovieHour($hour){
+        //Remove the T from the time value to get the number
+        $timeval = intval(substr($hour, 1));
+        //Variable to decide if it's AM or PM
+        $mirinium = 'AM';
+        //Check if it's 12pm or later via 24 hour time
+        if($timeval >= 12){
+          $mirinium = "PM";
+          //If it's after 12, subtract 12 to get its 12 Hour Time value
+          if($timeval > 12){
+            $timeval -= 12;
+          }
+        }
+
+        echo $timeval;
+        echo ":00 ";
+        echo $mirinium;
+      }
+
+      function phpTicketDisplay($ticketArray){
+        /*Take all ticket data and store them in the array
+        *Search the array for all non-0 Tickets
+        *Output tickets line by line if they aren't 0
+        * - MAY NEED A FOR LOOP ?
+        *Figure out a way to separate them by adult, child, concession and first-class.
+        */
+      }
+
+      //TICKET PRICING
+      //Takes the string $DD.CC and only uses the substring after $, leaving only the number
       $totalPrice = substr($_SESSION["totalprice"], 1);
+      //Cast the price to a float value
       $fTotalPrice = floatval($totalPrice);
+      //Calculate the total tickets' GST price (1/11 of the total)
       $gstPrice = ($fTotalPrice * 0.0909);
-      $finalPrice = number_format(($fTotalPrice + $gstPrice), 2);
+      //Add the GST to the total price for the final value
+      $finalPrice = ($fTotalPrice + $gstPrice);
 
 
 ?>
@@ -223,7 +301,7 @@
                     </td>
 
                     <td>
-                        <?php echo $_SESSION['$cleanFilm']; ?>
+                        <?php phpMovieTitle($_SESSION["movie"]["id"]);?>
                     </td>
                 </tr>
 
@@ -233,7 +311,10 @@
                     </td>
 
                     <td>
-                        <?php echo $_SESSION['$cleanSession']; ?>
+                        <?php
+                          phpMovieDay($_SESSION["movie"]["day"]);
+                          phpMovieHour($_SESSION["movie"]["hour"]);
+                          ?>
                     </td>
                 </tr>
 
@@ -251,8 +332,10 @@
                     <td></td>
 
                     <td>
-                        Total (Including GST): $<?php echo $finalPrice; ?>
-                        <!-- Add GST to the total add function and somehow call it in -->
+                      <!-- Using number format to display to 2 decimal places -->
+                        Total: $<?php echo number_format($fTotalPrice, 2); ?> <br>
+                        GST: $<?php echo number_format($gstPrice, 2); ?> <br>
+                        Total (Including GST): $<?php echo number_format($finalPrice, 2); ?>
                     </td>
                 </tr>
             </table>

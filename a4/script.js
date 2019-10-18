@@ -12,7 +12,9 @@ function textSwap(btn) {
 }
 
 function getMovieDetails(id, day, time) {
-
+  document.getElementById("movieID").value = id;
+  document.getElementById("movieDay").value = day;
+  document.getElementById("movieHour").value = time;
 }
 
 // toggleX: Disables the clicked nav button and enables the rest

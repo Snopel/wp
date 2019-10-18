@@ -19,13 +19,13 @@ session_start();
         <div class='inner'>
             <h1>Lunardo Cinemas</h1>
             <div class='info clearfix'>
-                <div class='wp'>Film<h2><?php echo $_SESSION['$cleanFilm']; ?></h2>
+                <div class='wp'>Name<h2><?php echo $_SESSION["cust"]["name"]; ?></h2>
                 </div>
-                <div class='wp'>Session<h2><?php echo $_SESSION['$cleanSession']; ?></h2>
+                <div class='wp'>Film<h2><?php echo $_SESSION; ?></h2>
                 </div>
-                <div class='wp'>Tickets</h2>
+                <div class='wp'>Session<?php echo $_SESSION; ?></h2>
                 </div>
-                <div class='wp'><?php echo $_SESSION['$cleanTicket']; ?></h2>
+                <div class='wp'>Ticket<?php echo $_SESSION; ?></h2>
                 </div>
             </div>
             <div class='total clearfix'>

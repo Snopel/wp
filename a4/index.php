@@ -243,11 +243,11 @@
                          - Value is what the text will change to.
                          - Data Value is a trigger for the discount value, which is utilised in 'addPrices'. -->
 
-                    <button data-value="1" value="<h2>Midsommar - Wednesday - 21:00</h2>" onclick="textSwap(this); getMovieDetails(AHF,WED,T21)">WED 21:00</button>
-                    <button data-value="0" value="<h2>Midsommar - Thursday - 21:00</h2>" onclick="textSwap(this)">THU 21:00</button>
-                    <button data-value="0" value="<h2>Midsommar - Friday - 21:00</h2>" onclick="textSwap(this)">FRI 21:00</button>
-                    <button data-value="0" value="<h2>Midsommar - Saturday - 18:00</h2>" onclick="textSwap(this)">SAT 18:00</button>
-                    <button data-value="0" value="<h2>Midsommar - Sunday - 18:00</h2>" onclick="textSwap(this)">SUN 18:00</button>
+                    <button data-value="1" value="<h2>Midsommar - Wednesday - 21:00</h2>" onclick="textSwap(this); getMovieDetails('AHF','WED','T21')">WED 21:00</button>
+                    <button data-value="0" value="<h2>Midsommar - Thursday - 21:00</h2>" onclick="textSwap(this); getMovieDetails('AHF','THU','T21')">THU 21:00</button>
+                    <button data-value="0" value="<h2>Midsommar - Friday - 21:00</h2>" onclick="textSwap(this; getMovieDetails('AHF','FRI','T21')">FRI 21:00</button>
+                    <button data-value="0" value="<h2>Midsommar - Saturday - 18:00</h2>" onclick="textSwap(this); getMovieDetails('AHF','SAT','T18')">SAT 18:00</button>
+                    <button data-value="0" value="<h2>Midsommar - Sunday - 18:00</h2>" onclick="textSwap(this); getMovieDetails('AHF','SUN','T18')">SUN 18:00</button>
             </div>
         </div>
 
@@ -260,10 +260,10 @@
                         <!-- From: http://deckchaircinema.com/films/upon-time-hollywood/#targetText=Quentin%20Tarantino's%20Once%20Upon%20a,industry%20they%20hardly%20recognize%20anymore.-->
                     </justify><br>
                     <br> Make a Booking:
-                    <button data-value="1" value="<h2>Once Upon A Time In Hollywood - Monday - 18:00</h2>" onclick="textSwap(this)">MON 18:00</button>
-                    <button data-value="0" value="<h2>Once Upon A Time In Hollywood - Tuesday - 18:00</h2>" onclick="textSwap(this)">TUE 18:00</button>
-                    <button data-value="0" value="<h2>Once Upon A Time In Hollywood - Saturday - 15:00</h2>" onclick="textSwap(this)">SAT 15:00</button>
-                    <button data-value="0" value="<h2>Once Upon A Time In Hollywood - Sunday - 15:00</h2>" onclick="textSwap(this)">SUN 15:00</button>
+                    <button data-value="1" value="<h2>Once Upon A Time In Hollywood - Monday - 18:00</h2>" onclick="textSwap(this); getMovieDetails('RMC','MON','T18')">MON 18:00</button>
+                    <button data-value="0" value="<h2>Once Upon A Time In Hollywood - Tuesday - 18:00</h2>" onclick="textSwap(this); getMovieDetails('RMC','TUE','T18')">TUE 18:00</button>
+                    <button data-value="0" value="<h2>Once Upon A Time In Hollywood - Saturday - 15:00</h2>" onclick="textSwap(this); getMovieDetails('RMC','SAT','T15')">SAT 15:00</button>
+                    <button data-value="0" value="<h2>Once Upon A Time In Hollywood - Sunday - 15:00</h2>" onclick="textSwap(this); getMovieDetails('RMC','SUN','T15')">SUN 15:00</button>
                 </pa>
             </div>
         </div>
@@ -277,13 +277,13 @@
                         <!-- From https://childrenandmedia.org.au/movie-reviews/movies/the-lion-king-->
                     </justify> <br>
                     <br> Make a Booking:
-                    <button data-value="1" value="<h2>The Lion King - Monday - 12:00</h2>" onclick="textSwap(this)">MON 12:00</button>
-                    <button data-value="1" value="<h2>The Lion King - Tuesday - 12:00</h2>" onclick="textSwap(this)">TUE 12:00</button>
-                    <button data-value="1" value="<h2>The Lion King - Wednesday - 18:00</h2>" onclick="textSwap(this)">WED 18:00</button>
-                    <button data-value="0" value="<h2>The Lion King - Thursday - 18:00</h2>" onclick="textSwap(this)">THU 18:00</button>
-                    <button data-value="0" value="<h2>The Lion King - Friday - 18:00</h2>" onclick="textSwap(this)">FRI 18:00</button>
-                    <button data-value="0" value="<h2>The Lion King - Saturday - 12:00</h2>" onclick="textSwap(this)">SAT 12:00</button>
-                    <button data-value="0" value="<h2>The Lion King - Sunday - 12:00</h2>" onclick="textSwap(this)">SUN 12:00</button>
+                    <button data-value="1" value="<h2>The Lion King - Monday - 12:00</h2>" onclick="textSwap(this); getMovieDetails('ANM','MON','T12')">MON 12:00</button>
+                    <button data-value="1" value="<h2>The Lion King - Tuesday - 12:00</h2>" onclick="textSwap(this); getMovieDetails('ANM','TUE','T12')">TUE 12:00</button>
+                    <button data-value="1" value="<h2>The Lion King - Wednesday - 18:00</h2>" onclick="textSwap(this); getMovieDetails('ANM','WED','T18')">WED 18:00</button>
+                    <button data-value="0" value="<h2>The Lion King - Thursday - 18:00</h2>" onclick="textSwap(this); getMovieDetails('ANM','THU','T18')">THU 18:00</button>
+                    <button data-value="0" value="<h2>The Lion King - Friday - 18:00</h2>" onclick="textSwap(this); getMovieDetails('ANM','FRI','T18')">FRI 18:00</button>
+                    <button data-value="0" value="<h2>The Lion King - Saturday - 12:00</h2>" onclick="textSwap(this); getMovieDetails('ANM','SAT','T12')">SAT 12:00</button>
+                    <button data-value="0" value="<h2>The Lion King - Sunday - 12:00</h2>" onclick="textSwap(this); getMovieDetails('ANM','SUN','T12')">SUN 12:00</button>
                 </pa>
             </div>
         </div>
@@ -297,11 +297,11 @@
                         <!-- From https://geeks.media/avengers-endgame -->
                     </justify>
                     <br> <br> Make a Booking:
-                    <button data-value="1" value="<h2>The Avengers: Endgame - Wednesday - 12:00</h2>" onclick="textSwap(this)">WED 12:00</button>
-                    <button data-value="1" value="<h2>The Avengers: Endgame - Thursday - 12:00</h2>" onclick="textSwap(this)">THU 12:00</button>
-                    <button data-value="1" value="<h2>The Avengers: Endgame - Friday - 12:00</h2>" onclick="textSwap(this)">FRI 12:00</button>
-                    <button data-value="0" value="<h2>The Avengers: Endgame - Saturday - 21:00</h2>" onclick="textSwap(this)">SAT 21:00</button>
-                    <button data-value="0" value="<h2>The Avengers: Endgame - Sunday - 21:00</h2>" onclick="textSwap(this)">SUN 21:00</button>
+                    <button data-value="1" value="<h2>The Avengers: Endgame - Wednesday - 12:00</h2>" onclick="textSwap(this); getMovieDetails('ACT','WED','T12')">WED 12:00</button>
+                    <button data-value="1" value="<h2>The Avengers: Endgame - Thursday - 12:00</h2>" onclick="textSwap(this); getMovieDetails('ACT','THU','T12')">THU 12:00</button>
+                    <button data-value="1" value="<h2>The Avengers: Endgame - Friday - 12:00</h2>" onclick="textSwap(this); getMovieDetails('ACT','FRI','T12')">FRI 12:00</button>
+                    <button data-value="0" value="<h2>The Avengers: Endgame - Saturday - 21:00</h2>" onclick="textSwap(this); getMovieDetails('ACT','SAT','T21')">SAT 21:00</button>
+                    <button data-value="0" value="<h2>The Avengers: Endgame - Sunday - 21:00</h2>" onclick="textSwap(this); getMovieDetails('ACT','SUN','T21')">SUN 21:00</button>
                 </pa>
             </div>
         </div>
@@ -324,6 +324,9 @@
                             <div class="form-style-3">
                                 <!--Form 1: The prices for the ticekts-->
                                 <form method="post" action='' onsubmit="return validateForm()">
+                                  <input type="hidden" id="movieID" name="movie[id]" value="">
+                                  <input type="hidden" id="movieDay" name="movie[day]" value="">
+                                  <input type="hidden" id="movieHour" name="movie[hour]" value="">
                                     <fieldset>
                                         <legend>Standard</legend>
                                         <label for="seats[STA]"><span>Adults</span>

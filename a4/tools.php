@@ -131,7 +131,8 @@ function preShow( $arr, $returnAsString=false ) {
 if($_POST){
   $_SESSION["cust"] = $_POST["cust"];
   $_SESSION["totalprice"] = $_POST["totalprice"];
-  }
+  $_SESSION["movie"] = $_POST["movie"];
+}
 /*if ($_POST){
   $errorsFound = 0;
   $cleanName = $_POST['cust']['name'];
