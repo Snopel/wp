@@ -49,6 +49,7 @@
             break;
         }
       }
+
       function phpMovieHour($hour){
         //Remove the T from the time value to get the number
         $timeval = intval(substr($hour, 1));
@@ -68,6 +69,73 @@
         echo $mirinium;
       }
 
+      function phpTicketsRec($seatsArr){
+        foreach ($seatsArr as $key => $value) {
+         if ($value > 0){
+           switch ($key){
+             case "STA":
+              echo "$value x Standard Adult <br>";
+              break;
+            case "STP":
+              echo "$value x Standard Concession <br>";
+              break;
+            case "STC":
+              echo "$value x Standard Child <br>";
+              break;
+            case "FCA":
+              echo "$value x First Class Adult <br>";
+              break;
+            case "FCP":
+              echo "$value x First Class Concession <br>";
+              break;
+            case "FCC":
+              echo "$value x First Class Child <br>";
+              break;
+            default:
+              break;
+           }
+         }
+       }
+      }
+
+      function phpTicketsSTA($seatsArr){
+        foreach ($seatsArr as $key => $value) {
+         if ($value > 0){
+           switch ($key){
+             case "STA":
+              echo "$value x  Adult <br>";
+              break;
+            case "STP":
+              echo "$value x  Concession <br>";
+              break;
+            case "STC":
+              echo "$value x Child <br>";
+              break;
+            default:
+              break;
+           }
+         }
+       }
+      }
+      function phpTicketsFC($seatsArr){
+        foreach ($seatsArr as $key => $value) {
+         if ($value > 0){
+           switch ($key){
+             case "FCA":
+              echo "$value x  Adult <br>";
+              break;
+            case "FCP":
+              echo "$value x  Concession <br>";
+              break;
+            case "FCC":
+              echo "$value x Child <br>";
+              break;
+            default:
+              break;
+           }
+         }
+       }
+      }
       //Validates the Expiry Date and displays it
       function phpExpiryDate($month, $year){
         $yearmonth = $year.'-'.$month; //YYYY-MM
@@ -131,7 +199,6 @@
                             </td>
 
                             <td>
-                                <button type="button" class="collapsible">View Movie Tickets</button>
                                 Customer Invoice<br>
                                 Created: <?php echo $date ?>
                             </td>
@@ -237,9 +304,9 @@
 
                 <td>
                     <?php
-                          phpMovieDay($_SESSION["movie"]["day"]);
-                          phpMovieHour($_SESSION["movie"]["hour"]);
-                          ?>
+                      phpMovieDay($_SESSION["movie"]["day"]);
+                      phpMovieHour($_SESSION["movie"]["hour"]);
+                    ?>
                 </td>
             </tr>
 
@@ -249,7 +316,7 @@
                 </td>
 
                 <td>
-                    <?php echo $_SESSION['$cleanTicket']; ?>
+                    <?php phpTicketsRec($_SESSION["seats"]); ?>
                 </td>
             </tr>
 
@@ -264,12 +331,6 @@
                 </td>
             </tr>
         </table>
-    </div>
-
-    <p>A Collapsible:</p>
-    <button type="button" class="collapsible">Open Collapsible</button>
-    <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
 
 </body>

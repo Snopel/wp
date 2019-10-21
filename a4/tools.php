@@ -125,6 +125,7 @@ if($_POST){
   $_SESSION["cust"] = $_POST["cust"];
   $_SESSION["totalprice"] = $_POST["totalprice"];
   $_SESSION["movie"] = $_POST["movie"];
+  $_SESSION["seats"] = $_POST["seats"];
 }
 
 
