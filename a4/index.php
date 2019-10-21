@@ -13,7 +13,7 @@
     <!-- Instantiating the Script for use in this HTML file -->
     <script src='script.js'></script>
     <!-- Using Include Once so variables aren't redeclared, avoiding a fatal error -->
-      <?php include_once ('tools.php');?>
+    <?php include_once ('tools.php');?>
 
 </head>
 
@@ -245,7 +245,7 @@
 
                     <button data-value="1" value="<h2>Midsommar - Wednesday - 21:00</h2>" onclick="textSwap(this); getMovieDetails('AHF','WED','T21')">WED 21:00</button>
                     <button data-value="0" value="<h2>Midsommar - Thursday - 21:00</h2>" onclick="textSwap(this); getMovieDetails('AHF','THU','T21')">THU 21:00</button>
-                    <button data-value="0" value="<h2>Midsommar - Friday - 21:00</h2>" onclick="textSwap(this; getMovieDetails('AHF','FRI','T21')">FRI 21:00</button>
+                    <button data-value="0" value="<h2>Midsommar - Friday - 21:00</h2>" onclick="textSwap(this); getMovieDetails('AHF','FRI','T21')">FRI 21:00</button>
                     <button data-value="0" value="<h2>Midsommar - Saturday - 18:00</h2>" onclick="textSwap(this); getMovieDetails('AHF','SAT','T18')">SAT 18:00</button>
                     <button data-value="0" value="<h2>Midsommar - Sunday - 18:00</h2>" onclick="textSwap(this); getMovieDetails('AHF','SUN','T18')">SUN 18:00</button>
             </div>
@@ -324,9 +324,9 @@
                             <div class="form-style-3">
                                 <!--Form 1: The prices for the ticekts-->
                                 <form method="post" action='' onsubmit="return validateForm()">
-                                  <input type="hidden" id="movieID" name="movie[id]" value="">
-                                  <input type="hidden" id="movieDay" name="movie[day]" value="">
-                                  <input type="hidden" id="movieHour" name="movie[hour]" value="">
+                                    <input type="hidden" id="movieID" name="movie[id]" value="">
+                                    <input type="hidden" id="movieDay" name="movie[day]" value="">
+                                    <input type="hidden" id="movieHour" name="movie[hour]" value="">
                                     <fieldset>
                                         <legend>Standard</legend>
                                         <label for="seats[STA]"><span>Adults</span>
@@ -424,7 +424,7 @@
                                                     <option value="10">10</option>
                                                 </select>
                                             </label>
-                                            <label style="font-weight:bolder;font-size:18px;">Total: <input type="text" id="ticketTotal" class="input-field" name="totalprice" value="" readonly/></label>
+                                            <label style="font-weight:bolder;font-size:18px;">Total: <input type="text" id="ticketTotal" class="input-field" name="totalprice" value="" readonly /></label>
                                 </fieldset>
                             </div>
                         </div>
@@ -439,36 +439,29 @@
                                     <label for="cust[email]"><span>Email<span class="required">*</span></span><input type="email" name="cust[email]" class="input-field" value="" /></label>
                                     <label for="cust[mobile]"><span>Mobile<span class="required">*</span></span><input type="text" name="cust[mobile]" class="input-field" value="" id="mobile" /></label>
                                     <label for="cust[card]"><span>Credit Card<span class="required">*</span></span><input type="text" id="credit-card" name="cust[card]" class="input-field" value="" /></label>
-                                    <label for="cust[expiry]"><span>Expiry<span class="required">*</span></span>
-                                        <select name="cust[expiry]" class="select-field">
-                                            <option value="0">10-2019</option>
-                                            <option value="1">11-2019</option>
-                                            <option value="2">12-2019</option>
-                                            <option value="3">01-2020</option>
-                                            <option value="3">01-2020</option>
-                                            <option value="3">02-2020</option>
-                                            <option value="3">03-2020</option>
-                                            <option value="3">04-2020</option>
-                                            <option value="3">05-2020</option>
-                                            <option value="3">06-2020</option>
-                                            <option value="3">07-2020</option>
-                                            <option value="3">08-2020</option>
-                                            <option value="3">09-2020</option>
-                                            <option value="3">10-2020</option>
-                                            <option value="3">11-2020</option>
-                                            <option value="3">12-2020</option>
-                                            <option value="3">01-2021</option>
-                                            <option value="3">02-2021</option>
-                                            <option value="3">03-2021</option>
-                                            <option value="3">04-2021</option>
-                                            <option value="3">05-2021</option>
-                                            <option value="3">06-2021</option>
-                                            <option value="3">07-2021</option>
-                                            <option value="3">08-2021</option>
-                                            <option value="3">09-2021</option>
-                                            <option value="3">10-2021</option>
-                                            <option value="3">11-2021</option>
-                                            <option value="3">12-2021</option>
+                                    <label for="cust[expiryMonth]"><span>Expiry Month<span class="required">*</span></span>
+                                        <select class="select-level" name="cust[expiryMonth]">
+                                            <option value="01">1</option>
+                                            <option value="02">2</option>
+                                            <option value="03">3</option>
+                                            <option value="04">4</option>
+                                            <option value="05">5</option>
+                                            <option value="06">6</option>
+                                            <option value="07">7</option>
+                                            <option value="08">8</option>
+                                            <option value="09">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                    <label for="cust[expiryYear]"><span>Expiry Year<span class="required">*</span></span>
+                                        <select class="select-level" name="cust[expiryYear]">
+                                            <option value="2019">2019</option>
+                                            <option value="2020">2020</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2022">2022</option>
+                                            <option value="2023">2023</option>
+                                            <option value="2024">2024</option>
                                         </select>
                                     </label>
                                     <br>
@@ -482,23 +475,25 @@
                 </div>
                 <center><img id="placeholder" src="../../media/lunardo_logo_s3541341" width="75%"></center>
         </pa>
-      </div>
+        </div>
 
         <br>
         <br>
-        <h2><center>Debug Module</center></h2>
-          <br>
-          <form class="" action="" method="post">
+        <h2>
+            <center>Debug Module</center>
+        </h2>
+        <br>
+        <form class="" action="" method="post">
             <input type="submit" value="Reset Session" name="reset-session">
-          </form>
-          <?php
+        </form>
+        <?php
           echo "Post:";
           preShow($_POST);
           echo "Session:";
           preShow($_SESSION);
           ?>
 
-          <br><br>
+        <br><br>
 
 
     </main>

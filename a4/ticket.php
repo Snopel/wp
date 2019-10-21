@@ -6,10 +6,8 @@
 </head>
 
 
-<?php
-    
-// Mandatory code to begin the Session
-session_start();
+<?php 
+    require_once('receipt.php');
     
 ?>
 
@@ -21,16 +19,15 @@ session_start();
             <div class='info clearfix'>
                 <div class='wp'>Name<h2><?php echo $_SESSION["cust"]["name"]; ?></h2>
                 </div>
-                <div class='wp'>Film<h2><?php echo $_SESSION; ?></h2>
+                <div class='wp'>Film<h2><?php phpMovieTitle($_SESSION["movie"]["id"]);?></h2>
                 </div>
-                <div class='wp'>Session<?php echo $_SESSION; ?></h2>
+                <div class='wp'>Session <?php
+                          phpMovieDay($_SESSION["movie"]["day"]);
+                          phpMovieHour($_SESSION["movie"]["hour"]);
+                          ?></h2>
                 </div>
-                <div class='wp'>Ticket<?php echo $_SESSION; ?></h2>
+                <div class='wp'>Tickets<?php echo $_SESSION; ?></h2>
                 </div>
-            </div>
-            <div class='total clearfix'>
-                <h2>Total (Including GST) : <p><?php echo $_SESSION['$cleanTotal']; ?></p>
-                </h2>
             </div>
         </div>
     </div>

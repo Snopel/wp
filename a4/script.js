@@ -12,9 +12,9 @@ function textSwap(btn) {
 }
 
 function getMovieDetails(id, day, time) {
-  document.getElementById("movieID").value = id;
-  document.getElementById("movieDay").value = day;
-  document.getElementById("movieHour").value = time;
+    document.getElementById("movieID").value = id;
+    document.getElementById("movieDay").value = day;
+    document.getElementById("movieHour").value = time;
 }
 
 // toggleX: Disables the clicked nav button and enables the rest
@@ -174,4 +174,19 @@ function validateForm() {
     validation &= validatePhone();
     validation &= validateCard();
     return validation;
+}
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    });
 }
