@@ -1,15 +1,14 @@
+<?php
+  require_once 'tools.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang='en'>
 
 <head>
     <link rel="stylesheet" href="ticket.css">
 </head>
-
-
-<?php
-    include('receipt.php');
-
-?>
 
 <body>
     <br>
@@ -19,16 +18,16 @@
         <div class='inner'>
             <h1>Lunardo Cinemas<br>Standard</h1>
             <div class='info clearfix'>
-                <div class='wp'>Name<h2><?php echo $_SESSION["cust"]["name"]; ?></h2>
+                <div class='wp'><h2>Name</h2> <?php echo $_SESSION["cust"]["name"]; ?>
                 </div>
-                <div class='wp'>Film<h2><?php phpMovieTitle($_SESSION["movie"]["id"]);?></h2>
+                <div class='wp'><h2>Film</h2><?php phpMovieTitle($_SESSION["movie"]["id"]);?>
                 </div>
-                <div class='wp'>Session<h2><?php
+                <div class='wp'><h2>Session</h2><?php
                           phpMovieDay($_SESSION["movie"]["day"]);
                           phpMovieHour($_SESSION["movie"]["hour"]);
-                          ?></h2>
+                          ?>
                 </div>
-                <div class='wp'>Admit<h2></h2>
+                <div class='wp'><h2>Admit</h2>
                   <?php phpTicketsSTA($_SESSION["seats"]); ?>
                 </div>
             </div>
@@ -39,18 +38,19 @@
         <div class='inner'>
             <h1>Lunardo Cinemas<br>First Class</h1>
             <div class='info clearfix'>
-                <div class='wp'>Name<h2><?php echo $_SESSION["cust"]["name"]; ?></h2>
+                <div class='wp'><h2>Name</h2> <?php echo $_SESSION["cust"]["name"]; ?>
                 </div>
-                <div class='wp'>Film<h2><?php phpMovieTitle($_SESSION["movie"]["id"]);?></h2>
+                <div class='wp'><h2>Film</h2><?php phpMovieTitle($_SESSION["movie"]["id"]);?>
                 </div>
-                <div class='wp'>Session<h2><?php
+                <div class='wp'><h2>Session</h2><?php
                           phpMovieDay($_SESSION["movie"]["day"]);
                           phpMovieHour($_SESSION["movie"]["hour"]);
-                          ?></h2>
+                          ?>
                 </div>
-                <div class='wp'>Admit<h2></h2>
+                <div class='wp'><h2>Admit</h2>
                   <?php phpTicketsFC($_SESSION["seats"]); ?>
                 </div>
             </div>
         </div>
+    </div>
 </body>

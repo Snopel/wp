@@ -175,4 +175,3 @@ function validateForm() {
     validation &= validateCard();
     return validation;
 }
-

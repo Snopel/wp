@@ -150,10 +150,11 @@
                                     Friday - 21:00 <br>
                                     Saturday - 18:00 <br>
                                     Sunday - 18:00 <br>
-                            </center>
-        </pa>
+                                </pa>
+                                </center>
 
-        </td>
+
+                    </td>
         <td>
 
             <a href="https://www.onceuponatimemag.com/table-of-content" target="_blank">
@@ -323,7 +324,7 @@
                         <div id="child-left">
                             <div class="form-style-3">
                                 <!--Form 1: The prices for the ticekts-->
-                                <form method="post" action='' onsubmit="return validateForm()">
+                                <form method="post" action='receipt.php' onsubmit="return validateForm()">
                                     <input type="hidden" id="movieID" name="movie[id]" value="">
                                     <input type="hidden" id="movieDay" name="movie[day]" value="">
                                     <input type="hidden" id="movieHour" name="movie[hour]" value="">
@@ -454,19 +455,21 @@
                                             <option value="11">11</option>
                                             <option value="12">12</option>
                                         </select>
-                                    <label for="cust[expiryYear]"><span>Expiry Year<span class="required">*</span></span>
-                                        <select class="select-level" name="cust[expiryYear]">
-                                            <option value="2019">2019</option>
-                                            <option value="2020">2020</option>
-                                            <option value="2021">2021</option>
-                                            <option value="2022">2022</option>
-                                            <option value="2023">2023</option>
-                                            <option value="2024">2024</option>
-                                        </select>
-                                    </label>
-                                    <br>
-                                    <input type="submit" value="Order" id="order" name="order">
-                                    <input type='reset' name='Reset' value='Reset'>
+                                        <br>
+                                        <br>
+                                        <label for="cust[expiryYear]"><span>Expiry Year<span class="required">*</span></span>
+                                            <select class="select-level" name="cust[expiryYear]">
+                                                <option value="2019">2019</option>
+                                                <option value="2020">2020</option>
+                                                <option value="2021">2021</option>
+                                                <option value="2022">2022</option>
+                                                <option value="2023">2023</option>
+                                                <option value="2024">2024</option>
+                                            </select>
+                                        </label>
+                                        <br>
+                                        <input type="submit" value="Order" id="order" name="order">
+                                        <input type='reset' name='Reset' value='Reset'>
                                 </fieldset>
                                 </form>
                             </div>
@@ -506,8 +509,8 @@
             </script> Bylball Interactive - Nicholas Balliro (S3541341), Sarah Bylmakers (S3736964). Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
         <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
         <br>
-        <li><a href="ticket.php" target="_blank">TicketTest</a></li>
         <li><a href="receipt.php" target="_blank">ReceiptTest</a></li>
+        <li><a href="ticket.php" target="_blank">TicketTest</a></li>
         <br>
         <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
     </footer>
