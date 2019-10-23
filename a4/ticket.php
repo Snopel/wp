@@ -1,4 +1,6 @@
 <?php
+    // This file receives the form values gathered in tools.php and displays them in a practical ticket format.
+    // Multiple tickets are printed if a customer purchases tickets for both standard and first class viewings.
   require_once 'tools.php';
 ?>
 
@@ -13,6 +15,7 @@
 <body>
     <br>
     <br>
+    <!–– This is to indicate a simple way of printing tickets for the customer, with a pre-built function in their browser. -->
     <div style="notice">Right click page and select 'Print' to print tickets</div>
     <div class="box">
         <div class='inner'>

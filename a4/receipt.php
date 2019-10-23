@@ -1,4 +1,5 @@
 <?php
+        // This file receives the form values gathered in tools.php and displays them in a practical ticket format.
       require_once ('tools.php');
 ?>
 
@@ -150,6 +151,7 @@
                 <td></td>
 
                 <td>
+                    <!-- This function utilises 3 languages: Javascript, PHP, and HTML. -->
                     <?php phpPriceCalc($_SESSION["totalprice"]); ?>
                 </td>
             </tr>

@@ -98,7 +98,7 @@ function printMyCode() {
   echo '</ol></pre>';
 }
 
-function preShow( $arr, $returnAsString=false ) {
+function preShow( $arr, $returnAsString = false ) {
   $ret  = '<pre>' . print_r($arr, true) . '</pre>';
   if ($returnAsString)
     return $ret;
@@ -106,27 +106,20 @@ function preShow( $arr, $returnAsString=false ) {
     echo $ret;
 }
 
-//Today's Date
+// Today's Date
 $date = date("d.m.y");
 
+// Code for testing whether the form's fields are empty or not. It redirects back to index.php if that is so.
 $nameErr = "";
 $seatsErr = "";
-$name = "";
-$seats = "";
 
-//SARAH PLS! <3
-/*if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["cust"]["name"]) || ($_POST["cust"]["email"]) || ($_POST["cust"]["mobile"]) || ($_POST["cust"]["card"]) || ($_POST["cust"]["expiryMonth"]) || ($_POST['cust']["expiryYear"])) {
     $custErr = "Customer information is required.";
   } else {
-    $cust = test_input($_POST["cust"]);
+    header("Location: javascript:history.back(-1)");
   }
-  if (empty($_POST["seats"])) {
-    $seatsErr = "Seat selection is required.";
-  } else {
-    $seats = test_input($_POST["seats"]);
-  }
-}*/
+}
 
 
 if($_POST){
@@ -161,9 +154,9 @@ if($_POST){
     $_SESSION["totalprice"] = $cleanPrice;
   }
 
-  // BROKEN CODE! TREVOR HELP NECESSARY
   //Adding the information to a spreadsheet
-  $now = date('d/m h:i');
+  $now = date('d/m h:i'); //Current Date and Time
+  //Merging all the details into one array
   $cells = array_merge(
     array($now),
     $_SESSION['cust'],
@@ -171,19 +164,23 @@ if($_POST){
     $_SESSION['seats'],
     array($_SESSION["totalprice"])
   );
+  //Headings array
+  $headings = ["Date", "Name", "Email", "Mobile", 'Card_No', "Expiry_Day", "Expiry_Year",
+   "Movie_ID", "Day", "Time",
+   "Qty_STA", "Qty_STP", "Qty_STC", "Qty_FCA", "Qty_FCP", "Qty_FCC", "Total_Price"];
 
+  //Opening the bookings.txt file to append information to it
   $fp = fopen('bookings.txt', 'a');
-
-  foreach($cells as $key => $value){
-    fputcsv($fp, $cells);
-  }
-
+  flock($fp, LOCK_SH);
+  fputcsv($fp, $headings, "\t");
+  fputcsv($fp, $cells, "\t");
+  flock($fp, LOCK_UN);
   fclose($fp);
 }
 
-
 /*if(empty($_SESSION['cust']) || empty($_SESSION['movie']) || empty($_SESSION['seats'])){
-  header('Location: index.php');
+  header("Location: javascript:history.back(-1)");
+  exit();
 }*/
 
   //Clears the user's session if pressed
